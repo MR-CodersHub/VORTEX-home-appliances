@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="vortex-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a8893d"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#vortex-grad)"/>
+  <path d="M 18 16 L 28 16 L 32 37 L 36 16 L 46 16 L 37 48 L 27 48 Z" fill="#0d111a"/>
+</svg>

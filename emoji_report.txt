@@ -1,0 +1,144 @@
+about.html:67: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+blog-details.html:22: ['📞'] => <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+blog-details.html:25: ['🛡'] => <span>🛡️ Certified Service Guarantee &amp; Free Installation</span>
+blog-details.html:61: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+blog-details.html:91: ['🛠'] => <span>🛠️</span>
+blog-details.html:141: ['🔗'] => <button class="social-icon-btn" onclick="navigator.clipboard.writeText(window.location.href); alert(
+blog-details.html:264: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+blog-details.html:271: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+blog-details.html:278: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+blog-details.html:285: ['📞'] => <div class="guarantee-icon-box">📞</div>
+blog.html:19: ['📞'] => <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+blog.html:22: ['💡'] => <span>💡 Expert Advice from Showroom Specialists & Master Technicians</span>
+blog.html:58: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+blog.html:88: ['🛠'] => <span>🛠️</span>
+blog.html:106: ['⭐'] => <span class="badge badge-gold">⭐ 100% Practical Guides</span>
+blog.html:121: ['💡'] => <span>💡</span>
+blog.html:143: ['📚'] => <span>📚 12 Master Repair Guides</span>
+blog.html:306: ['✉'] => <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+blog.html:348: ['✅'] => <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5r
+blog.html:371: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+blog.html:378: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+blog.html:385: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+blog.html:392: ['📞'] => <div class="guarantee-icon-box">📞</div>
+contact.html:69: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+home2.html:68: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Navigation">☰</button>
+home2.html:98: ['🛠'] => <span>🛠️</span>
+home2.html:503: ['✦'] => <span class="protection-badge-floating">✦ MOST POPULAR CHOICE</span>
+home2.html:728: ['✉'] => <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+home2.html:770: ['✅'] => <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5r
+home2.html:793: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+home2.html:800: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+home2.html:807: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+home2.html:814: ['📞'] => <div class="guarantee-icon-box">📞</div>
+index.html:80: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Navigation">☰</button>
+index.html:110: ['🛠'] => <span>🛠️</span>
+index.html:980: ['💬'] => <span class="testi-big-icon">💬</span>
+index.html:1044: ['✦'] => <h4 style="font-size:1rem; font-weight:800; color:var(--accent-teal-light); margin:0;">Good Job! ✦</
+index.html:1212: ['✉'] => <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+index.html:1260: ['✅'] => onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5rem 0;\
+index.html:1288: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+index.html:1295: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+index.html:1302: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+index.html:1309: ['📞'] => <div class="guarantee-icon-box">📞</div>
+privacy-policy.html:22: ['📞'] => <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+privacy-policy.html:25: ['🛡'] => <span>🛡️ Certified Service Guarantee &amp; Free Installation</span>
+privacy-policy.html:61: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+privacy-policy.html:91: ['🛠'] => <span>🛠️</span>
+privacy-policy.html:168: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+privacy-policy.html:175: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+privacy-policy.html:182: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+privacy-policy.html:189: ['📞'] => <div class="guarantee-icon-box">📞</div>
+product-details.html:22: ['📞'] => <span>📞 Store & Service Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+product-details.html:25: ['🛡'] => <span>🛡️ Certified Service Guarantee & Free Installation</span>
+product-details.html:61: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+product-details.html:91: ['🛠'] => <span>🛠️</span>
+product-details.html:147: ['🛡'] => <span style="font-size:1.5rem;">🛡️</span>
+product-details.html:165: ['💬'] => <span>💬</span>
+product-details.html:169: ['🛠'] => <span>🛠️</span>
+product-details.html:173: ['📍'] => <span>📍</span>
+product-details.html:181: ['🛠'] => <div>🛠️ <strong>Certified Installation</strong><br>By OEM Master Techs</div>
+product-details.html:182: ['♻'] => <div>♻️ <strong>Old Appliance Haul-Away</strong><br>Eco-friendly recycling</div>
+product-details.html:193: ['⚙'] => <span class="section-subtitle">⚙️ Technical Specifications</span>
+product-details.html:252: ['✉'] => <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+product-details.html:294: ['✅'] => <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5r
+product-details.html:317: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+product-details.html:324: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+product-details.html:331: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+product-details.html:338: ['📞'] => <div class="guarantee-icon-box">📞</div>
+products.html:22: ['📞'] => <span>📞 Store & Service Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+products.html:25: ['🛡'] => <span>🛡️ Up to 10-Year Manufacturer Compressor Warranty</span>
+products.html:63: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+products.html:93: ['🛠'] => <span>🛠️</span>
+products.html:111: ['⭐'] => <span class="badge badge-gold">⭐ 100% Genuine OEM Factory Warranties</span>
+products.html:122: ['💬'] => <span>💬</span>
+products.html:126: ['🛠'] => <span>🛠️</span>
+products.html:143: ['🚚'] => <span style="font-size:1.25rem;">🚚</span>
+products.html:147: ['🛠'] => <span style="font-size:1.25rem;">🛠️</span>
+products.html:151: ['♻'] => <span style="font-size:1.25rem;">♻️</span>
+products.html:157: ['📍'] => <span>📍 In-Store Viewing Available</span>
+products.html:238: ['🌱'] => <span class="eco-tag-badge">🌱 Eco Inverter Technology</span>
+products.html:475: ['✉'] => <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+products.html:523: ['✅'] => onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5rem 0;\
+products.html:549: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+products.html:556: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+products.html:563: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+products.html:570: ['📞'] => <div class="guarantee-icon-box">📞</div>
+services.html:69: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+sitemap.html:22: ['📞'] => <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+sitemap.html:25: ['🛡'] => <span>🛡️ Certified Service Guarantee &amp; Free Installation</span>
+sitemap.html:61: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+sitemap.html:91: ['🛠'] => <span>🛠️</span>
+sitemap.html:122: ['🏛'] => <span style="font-size:1.4rem;">🏛️</span>
+sitemap.html:126: ['🏠'] => <li><a href="index.html" style="color:var(--text-secondary); text-decoration:none;">🏠 Home (Flagship
+sitemap.html:127: ['✨'] => <li><a href="home2.html" style="color:var(--text-secondary); text-decoration:none;">✨ Home 2 (Depart
+sitemap.html:128: ['👥'] => <li><a href="about.html" style="color:var(--text-secondary); text-decoration:none;">👥 About &amp; Ma
+sitemap.html:129: ['🛍'] => <li><a href="products.html" style="color:var(--text-secondary); text-decoration:none;">🛍️ Showroom C
+sitemap.html:130: ['🔧'] => <li><a href="services.html" style="color:var(--text-secondary); text-decoration:none;">🔧 Repair Book
+sitemap.html:131: ['📰'] => <li><a href="blog.html" style="color:var(--text-secondary); text-decoration:none;">📰 Appliance Care 
+sitemap.html:132: ['📍'] => <li><a href="contact.html" style="color:var(--text-secondary); text-decoration:none;">📍 Contact &amp
+sitemap.html:139: ['❄'] => <span style="font-size:1.4rem;">❄️</span>
+sitemap.html:143: ['🧊'] => <li><a href="products.html?category=Refrigerators" style="color:var(--text-secondary); text-decorati
+sitemap.html:144: ['🧺'] => <li><a href="products.html?category=Washing%20Machines" style="color:var(--text-secondary); text-dec
+sitemap.html:145: ['💨'] => <li><a href="products.html?category=Air%20Conditioners" style="color:var(--text-secondary); text-dec
+sitemap.html:146: ['🍳'] => <li><a href="products.html?category=Built-In%20Ovens" style="color:var(--text-secondary); text-decor
+sitemap.html:147: ['🍽'] => <li><a href="products.html?category=Dishwashers" style="color:var(--text-secondary); text-decoration
+sitemap.html:148: ['🧹'] => <li><a href="products.html?category=Vacuum%20Cleaners" style="color:var(--text-secondary); text-deco
+sitemap.html:155: ['⚡'] => <span style="font-size:1.4rem;">⚡</span>
+sitemap.html:159: ['📅'] => <li><a href="services.html#booking" style="color:var(--text-secondary); text-decoration:none;">📅 Onl
+sitemap.html:160: ['🏷'] => <li><a href="services.html#pricing" style="color:var(--text-secondary); text-decoration:none;">🏷️ Tr
+sitemap.html:161: ['🛡'] => <li><a href="services.html#amc" style="color:var(--text-secondary); text-decoration:none;">🛡️ Annual
+sitemap.html:162: ['🔍'] => <li><a href="warranty.html" style="color:var(--text-secondary); text-decoration:none;">🔍 OEM Warrant
+sitemap.html:163: ['🚨'] => <li><a href="contact.html#concierge" style="color:var(--text-secondary); text-decoration:none;">🚨 24
+sitemap.html:170: ['📚'] => <span style="font-size:1.4rem;">📚</span>
+sitemap.html:174: ['📖'] => <li><a href="blog-details.html?id=1" style="color:var(--text-secondary); text-decoration:none;">📖 Re
+sitemap.html:175: ['📖'] => <li><a href="blog-details.html?id=2" style="color:var(--text-secondary); text-decoration:none;">📖 10
+sitemap.html:176: ['📖'] => <li><a href="blog-details.html?id=3" style="color:var(--text-secondary); text-decoration:none;">📖 Re
+sitemap.html:177: ['📖'] => <li><a href="blog-details.html?id=4" style="color:var(--text-secondary); text-decoration:none;">📖 Cu
+sitemap.html:178: ['📖'] => <li><a href="blog-details.html?id=5" style="color:var(--text-secondary); text-decoration:none;">📖 Mi
+sitemap.html:179: ['📖'] => <li><a href="blog-details.html?id=6" style="color:var(--text-secondary); text-decoration:none;">📖 Di
+sitemap.html:186: ['⚖'] => <span style="font-size:1.4rem;">⚖️</span>
+sitemap.html:190: ['🔒'] => <li><a href="privacy-policy.html" style="color:var(--text-secondary); text-decoration:none;">🔒 Priva
+sitemap.html:191: ['📜'] => <li><a href="terms.html" style="color:var(--text-secondary); text-decoration:none;">📜 Terms of Servi
+sitemap.html:192: ['🛡'] => <li><a href="warranty.html" style="color:var(--text-secondary); text-decoration:none;">🛡️ OEM Warran
+sitemap.html:193: ['🏢'] => <li><a href="contact.html" style="color:var(--text-secondary); text-decoration:none;">🏢 Store Showro
+sitemap.html:211: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+sitemap.html:218: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+sitemap.html:225: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+sitemap.html:232: ['📞'] => <div class="guarantee-icon-box">📞</div>
+terms.html:22: ['📞'] => <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+terms.html:25: ['🛡'] => <span>🛡️ Certified Service Guarantee &amp; Free Installation</span>
+terms.html:61: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+terms.html:91: ['🛠'] => <span>🛠️</span>
+terms.html:162: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+terms.html:169: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+terms.html:176: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+terms.html:183: ['📞'] => <div class="guarantee-icon-box">📞</div>
+warranty.html:22: ['📞'] => <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+warranty.html:25: ['🛡'] => <span>🛡️ Certified Service Guarantee &amp; Free Installation</span>
+warranty.html:61: ['☰'] => <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+warranty.html:91: ['🛠'] => <span>🛠️</span>
+warranty.html:226: ['🚚'] => <div class="guarantee-icon-box">🚚</div>
+warranty.html:233: ['🛡'] => <div class="guarantee-icon-box">🛡️</div>
+warranty.html:240: ['🔧'] => <div class="guarantee-icon-box">🔧</div>
+warranty.html:247: ['📞'] => <div class="guarantee-icon-box">📞</div>

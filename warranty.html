@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OEM Factory Warranty & Service Center Registration — VORTEX</title>
+  <meta name="description"
+    content="Check your appliance warranty status, register your product, and explore 10-year inverter compressor protection coverage from VORTEX Store & Service Center.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+        </div>
+        <div class="top-bar-item">
+          <span>🛡️ Certified Service Guarantee &amp; Free Installation</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span>In Stock &amp; Ready for Express Delivery</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX<span>.</span>
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-theme-controls" style="display:flex; align-items:center; gap:0.4rem;">
+          <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+          <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+        </div>
+        <a href="services.html#booking" class="btn btn-sm btn-primary header-cta">Book a Service</a>
+        <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+      <button class="btn-icon" id="mobile-close-btn">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="home2.html" class="mobile-nav-link">Home 2 (Alt View)</a>
+      <a href="about.html" class="mobile-nav-link">About Store & Service Center</a>
+      <a href="products.html" class="mobile-nav-link">Products &amp; Showroom</a>
+      <a href="services.html" class="mobile-nav-link">Services &amp; Repair Booking</a>
+      <a href="blog.html" class="mobile-nav-link">Appliance Blog & Guides</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Store & Service Hub</a>
+    </div>
+    <div class="mobile-drawer-cta-wrap">
+      <a href="services.html#booking" class="mobile-drawer-booking-btn">
+        <span>Book a Repair</span>
+        <span>🛠️</span>
+      </a>
+    </div>
+    <div class="mobile-drawer-utility">
+      <button class="mobile-util-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+      <button class="mobile-util-btn dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <div style="background:var(--bg-secondary); border-bottom:1px solid var(--border-subtle); padding:1rem 0; font-size:0.85rem; color:var(--text-muted);">
+    <div class="container">
+      <a href="index.html" style="color:var(--text-muted);">Home</a> &nbsp;/&nbsp;
+      <span style="color:var(--accent-teal);">OEM Warranty Hub</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section style="padding:4rem 0 3rem 0; background:linear-gradient(135deg, rgba(196,162,96,0.08) 0%, var(--bg-primary) 100%); border-bottom:1px solid var(--border-subtle);">
+    <div class="container" style="max-width:960px; text-align:center;">
+      <span class="section-subtitle">Zero Deductible Peace of Mind</span>
+      <h1 class="heading-xl" style="margin-bottom:1rem;">OEM Factory Warranty Coverage</h1>
+      <p style="font-size:1.1rem; color:var(--text-secondary); max-width:650px; margin:0 auto 2rem auto; line-height:1.65;">
+        Every home appliance purchased through VORTEX includes 100% factory-authorized manufacturer warranty plus our certified master repair dispatch guarantee.
+      </p>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+        <a href="#lookup-section" class="btn btn-primary">Check Warranty Status ↓</a>
+        <a href="services.html#booking" class="btn btn-secondary">File a Repair Claim →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Warranty Lookup Tool -->
+  <section style="padding:2.5rem 0 1.5rem 0;" id="lookup-section">
+    <div class="container" style="max-width:850px;">
+      <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:24px; padding:2.5rem; box-shadow:var(--shadow-md);">
+        <div style="text-align:center; margin-bottom:2rem;">
+          <span class="badge badge-teal" style="margin-bottom:0.6rem;">INSTANT SERIAL VERIFICATION</span>
+          <h2 class="heading-md" style="margin-bottom:0.5rem;">Check Appliance Warranty Status</h2>
+          <p style="color:var(--text-muted); font-size:0.92rem;">Enter your 10-digit serial number or VORTEX order invoice ID below.</p>
+        </div>
+
+        <form id="warranty-lookup-form" onsubmit="event.preventDefault(); document.getElementById('warranty-result').style.display='block';">
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <input type="text" id="serial-input" class="form-control" placeholder="e.g. VTX-RF-2024-8890" style="flex:1; min-width:260px;" required>
+            <button type="submit" class="btn btn-primary" style="white-space:nowrap;">Verify Coverage →</button>
+          </div>
+        </form>
+
+        <div id="warranty-result" style="display:none; margin-top:2rem; padding:1.5rem; background:rgba(196,162,96,0.08); border:1px solid rgba(196,162,96,0.3); border-radius:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+              <span class="badge badge-teal" style="margin-bottom:0.3rem;">ACTIVE FACTORY WARRANTY</span>
+              <h3 style="font-size:1.15rem; color:var(--text-primary); margin:0;">Samsung French-Door 650L (Twin Cooling)</h3>
+            </div>
+            <div style="text-align:right;">
+              <span style="font-size:0.8rem; color:var(--text-muted);">Invoice: <strong>#VTX-94821</strong></span>
+            </div>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:1rem; padding-top:1rem; border-top:1px solid var(--border-subtle); font-size:0.88rem;">
+            <div><span style="color:var(--text-muted); font-size:0.78rem;">Compressor Coverage:</span><br><strong style="color:var(--accent-teal);">10 Years Full (Until 2034)</strong></div>
+            <div><span style="color:var(--text-muted); font-size:0.78rem;">Parts &amp; Labor:</span><br><strong style="color:var(--text-primary);">Valid (1 Yr 4 Mos Remaining)</strong></div>
+            <div><span style="color:var(--text-muted); font-size:0.78rem;">Dispatch SLA:</span><br><strong style="color:var(--text-primary);">2-Hour Priority VIP</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warranty Coverage Breakdown Table -->
+  <section style="padding:2.5rem 0 1.5rem 0; background:var(--bg-secondary); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2rem;">
+        <span class="section-subtitle">Complete Transparency</span>
+        <h2 class="heading-lg section-title">Standard OEM Coverage Matrix</h2>
+        <p class="section-desc">Zero-deductible factory parts &amp; certified technician labor guarantee.</p>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table style="width:100%; border-collapse:collapse; background:var(--bg-card); border-radius:20px; overflow:hidden; border:1px solid var(--border-medium); font-size:0.92rem;">
+          <thead>
+            <tr style="background:rgba(196,162,96,0.12); text-align:left; border-bottom:1px solid var(--border-medium);">
+              <th style="padding:1.25rem 1.5rem;">Category</th>
+              <th style="padding:1.25rem 1.5rem;">Comprehensive Base</th>
+              <th style="padding:1.25rem 1.5rem;">Core Component Protection</th>
+              <th style="padding:1.25rem 1.5rem;">VORTEX Dispatch SLA</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:1.25rem 1.5rem; font-weight:800; color:var(--text-primary);">Smart Refrigeration</td>
+              <td style="padding:1.25rem 1.5rem;">2 Years Full Parts &amp; Labor</td>
+              <td style="padding:1.25rem 1.5rem; color:var(--accent-teal); font-weight:700;">10 Years Digital Inverter Compressor</td>
+              <td style="padding:1.25rem 1.5rem;">Under 4 Hours Emergency</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:1.25rem 1.5rem; font-weight:800; color:var(--text-primary);">Washing Machines &amp; Dryers</td>
+              <td style="padding:1.25rem 1.5rem;">2 Years Full Parts &amp; Labor</td>
+              <td style="padding:1.25rem 1.5rem; color:var(--accent-teal); font-weight:700;">10 Years Direct-Drive Inverter Motor</td>
+              <td style="padding:1.25rem 1.5rem;">Same-Day Dispatch</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:1.25rem 1.5rem; font-weight:800; color:var(--text-primary);">Inverter Air Conditioners</td>
+              <td style="padding:1.25rem 1.5rem;">2 Years PCB &amp; Electronics</td>
+              <td style="padding:1.25rem 1.5rem; color:var(--accent-teal); font-weight:700;">10 Years Rotary Inverter Compressor</td>
+              <td style="padding:1.25rem 1.5rem;">24/7 Priority Cooling Queue</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <td style="padding:1.25rem 1.5rem; font-weight:800; color:var(--text-primary);">Built-In Pyrolytic Ovens</td>
+              <td style="padding:1.25rem 1.5rem;">3 Years Heating Elements</td>
+              <td style="padding:1.25rem 1.5rem; color:var(--accent-teal); font-weight:700;">5 Years Cavity &amp; Ceramic Liner</td>
+              <td style="padding:1.25rem 1.5rem;">Next-Day Dispatch</td>
+            </tr>
+            <tr>
+              <td style="padding:1.25rem 1.5rem; font-weight:800; color:var(--text-primary);">Quiet Dishwashers</td>
+              <td style="padding:1.25rem 1.5rem;">2 Years Valves &amp; Sensors</td>
+              <td style="padding:1.25rem 1.5rem; color:var(--accent-teal); font-weight:700;">10 Years Stainless Tub Rust-Through</td>
+              <td style="padding:1.25rem 1.5rem;">Same-Day Dispatch</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ULTRA-PROFESSIONAL SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+
+    <!-- Layer 2: 4 Service Guarantees -->
+    <div class="footer-guarantee-bar">
+      <div class="container">
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🚚</div>
+            <div class="guarantee-text">
+              <strong>Free Express Shipping</strong>
+              <span>On all appliance orders over $499</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🛡️</div>
+            <div class="guarantee-text">
+              <strong>10-Year Inverter Protection</strong>
+              <span>Factory authorized zero-deductible warranty</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🔧</div>
+            <div class="guarantee-text">
+              <strong>Certified OEM Hookup</strong>
+              <span>Master technician installation included</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">📞</div>
+            <div class="guarantee-text">
+              <strong>24/7 Service Hotline</strong>
+              <span>Direct master technician emergency dispatch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3: Main 5-Column Navigation -->
+    <div class="footer-main-section">
+      <div class="container">
+        <div class="footer-5col-grid">
+
+          <!-- Col 1: Brand & Bio -->
+          <div>
+            <a href="index.html" class="brand-logo">
+              <div class="logo-icon">V</div>
+              <div class="logo-text">
+                VORTEX<span>.</span>
+                <span class="logo-tagline">Appliance Store & Service Center</span>
+              </div>
+            </a>
+            <p class="footer-brand-p">
+              Premier home appliance showroom & factory-authorized master service center. Certified sales, professional installation, and 24/7 service since 2010.
+            </p>
+            <div class="footer-contact-pills">
+              <div class="contact-pill-item"><strong>+1 (800) 555-VORTEX</strong></div>
+              <div class="contact-pill-item">support@vortex.com</div>
+            </div>
+            <div class="social-links-row">
+              <a href="https://facebook.com/vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook">FB</a>
+              <a href="https://instagram.com/vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram">IG</a>
+              <a href="https://youtube.com/@vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="YouTube">YT</a>
+              <a href="https://linkedin.com/company/vortex-appliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">LN</a>
+              <a href="https://x.com/vortexcare" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Twitter / X">X</a>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links (Matches Navbar Exactly) -->
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Showroom Categories -->
+          <div>
+            <h4 class="footer-col-title">Store Catalog</h4>
+            <ul class="footer-nav-list">
+              <li><a href="products.html?category=Refrigerators">Flagship Refrigerators</a></li>
+              <li><a href="products.html?category=Washing%20Machines">Smart Washers &amp; Dryers</a></li>
+              <li><a href="products.html?category=Air%20Conditioners">Inverter Air Conditioners</a></li>
+              <li><a href="products.html?category=Built-In%20Ovens">Built-In Pyrolytic Ovens</a></li>
+              <li><a href="products.html?category=Dishwashers">Quiet Dishwashers</a></li>
+              <li><a href="products.html?category=Vacuum%20Cleaners">Cordless Stick Vacuums</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Master Repair Services -->
+          <div>
+            <h4 class="footer-col-title">Master Service Center</h4>
+            <ul class="footer-nav-list">
+              <li><a href="services.html#booking">Compressor &amp; Motor Repair</a></li>
+              <li><a href="services.html#booking">AC Chemical Wash &amp; Service</a></li>
+              <li><a href="services.html#booking">Washer Drum Calibration</a></li>
+              <li><a href="services.html#booking">Same-Day Emergency Dispatch</a></li>
+              <li><a href="services.html#booking">100% Factory OEM Parts</a></li>
+              <li><a href="services.html#booking">Annual Care Maintenance</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Showroom Hours & Location -->
+          <div>
+            <h4 class="footer-col-title">Store &amp; Service Hours</h4>
+            <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.5;">
+              <strong>Flagship Store:</strong> 742 Evergreen Terrace, Tech District, NY 10001
+            </p>
+            <div class="footer-hours-box">
+              <div class="hours-row">
+                <span>Mon – Sat:</span>
+                <strong style="color:var(--text-primary);">8:00 AM – 9:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Sunday:</span>
+                <strong style="color:var(--text-primary);">10:00 AM – 6:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Emergency:</span>
+                <strong style="color:var(--accent-teal);">24/7/365 Open</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 4: Bottom Security Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container bottom-bar-inner">
+        <div>© 2026 VORTEX Home Appliances &amp; Care Inc. All Rights Reserved.</div>
+        <div class="legal-links-row">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms of Service</a>
+          <span>•</span>
+          <a href="warranty.html">OEM Warranty</a>
+          <span>•</span>
+          <a href="sitemap.html">Site Map</a>
+        </div>
+        <div class="payment-badges-row">
+          <span class="payment-chip">VISA</span>
+          <span class="payment-chip">MasterCard</span>
+          <span class="payment-chip">AMEX</span>
+          <span class="payment-chip">Apple Pay</span>
+          <span class="payment-chip">ISO-9001</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top-btn" title="Scroll to top">↑</button>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliance Specifications, Warranty & Service - VORTEX Store</title>
+  <meta name="description"
+    content="View complete appliance specifications, manufacturer warranty coverage, certified installation options, and master service support.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <span>📞 Store & Service Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+        </div>
+        <div class="top-bar-item">
+          <span>🛡️ Certified Service Guarantee & Free Installation</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span>In Stock & Ready for Express Delivery</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX<span>.</span>
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link active">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-theme-controls" style="display:flex; align-items:center; gap:0.4rem;">
+          <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+          <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+        </div>
+        <a href="cart.html" class="header-cart-btn" id="header-cart-btn" title="View Shopping Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="header-cart-count">0</span>
+        </a>
+        <a href="services.html#booking" class="btn btn-sm btn-primary header-cta">Book a Service</a>
+        <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+      <button class="btn-icon" id="mobile-close-btn">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="home2.html" class="mobile-nav-link">Home 2 (Alt View)</a>
+      <a href="about.html" class="mobile-nav-link">About Store & Service Center</a>
+      <a href="products.html" class="mobile-nav-link active">Products & Showroom</a>
+      <a href="services.html" class="mobile-nav-link">Services & Repair Booking</a>
+      <a href="blog.html" class="mobile-nav-link">Appliance Blog & Guides</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Store & Service Hub</a>
+    </div>
+    <div class="mobile-drawer-cta-wrap">
+      <a href="services.html#booking" class="mobile-drawer-booking-btn">
+        <span>Book a Repair</span>
+        <span>🛠️</span>
+      </a>
+    </div>
+    <div class="mobile-drawer-utility">
+      <button class="mobile-util-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+      <button class="mobile-util-btn dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs -->
+  <div
+    style="background:var(--bg-secondary); border-bottom:1px solid var(--border-subtle); padding:1rem 0; font-size:0.85rem; color:var(--text-muted);">
+    <div class="container">
+      <a href="index.html" style="color:var(--text-muted);">Home</a> &nbsp;/&nbsp;
+      <a href="products.html" style="color:var(--text-muted);">Products Catalog</a> &nbsp;/&nbsp;
+      <span style="color:var(--accent-teal);" id="breadcrumb-title">Product Details</span>
+    </div>
+  </div>
+
+  <!-- Main Product Showcase Section -->
+  <section style="padding:2.5rem 0 1.5rem 0;" id="product-detail-view">
+    <div class="container">
+      <div class="product-details-grid">
+
+        <!-- Left: Image Gallery -->
+        <div class="gallery-container">
+          <div class="main-gallery-view">
+            <img src="assets/vortex_french_door.jpg"
+              alt="Main Product Gallery" id="pd-main-img">
+          </div>
+          <div class="thumbnails-row" id="pd-thumbnails">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Right: Information & Actions -->
+        <div>
+          <div class="badge badge-teal" style="margin-bottom:0.6rem;" id="pd-brand">SAMSUNG</div>
+          <h1 class="heading-lg" style="margin-bottom:0.75rem;" id="pd-title">Vortex Smart French-Door Refrigerator 650L
+          </h1>
+
+          <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
+            <div class="stars" style="color:var(--accent-warm-gold);">★★★★★</div>
+            <span style="font-size:0.9rem; color:var(--text-muted);">4.9 (128 Customer Reviews)</span>
+            <span class="badge badge-beige">In Stock</span>
+          </div>
+
+          <div style="display:flex; align-items:baseline; gap:1rem; margin-bottom:1.5rem;">
+            <span style="font-size:2.2rem; font-weight:800; color:var(--text-primary);" id="pd-price">$2,499</span>
+            <span style="font-size:1.1rem; color:var(--text-dim); text-decoration:line-through;"
+              id="pd-old-price">$2,899</span>
+            <span class="badge badge-sale">Save $400</span>
+          </div>
+
+          <div
+            style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-md); padding:1rem 1.25rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.75rem;">
+            <span style="font-size:1.5rem;">🛡️</span>
+            <div>
+              <strong style="display:block; font-size:0.9rem; color:var(--accent-teal);" id="pd-warranty">10 Years
+                Compressor Warranty</strong>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Includes 2 Years Full Coverage & 90-Day Repair
+                Guarantee</span>
+            </div>
+          </div>
+
+          <p style="color:var(--text-secondary); line-height:1.6; margin-bottom:1.75rem;" id="pd-desc">
+            Experience intelligent food preservation with precision twin cooling systems, flex zone temperature
+            controls, and ambient interior LED lighting designed for modern dark-themed kitchens.
+          </p>
+
+          <!-- Store Consultation & Service Booking Actions -->
+          <div style="display:flex; align-items:stretch; gap:1rem; margin-bottom:1.5rem; flex-wrap:wrap;">
+            <a href="contact.html" id="pd-enquire-btn" class="btn btn-lg btn-primary" style="flex:1; min-width:220px; justify-content:center; gap:0.5rem;">
+              <span>Enquire &amp; Request Quote</span>
+              <span>💬</span>
+            </a>
+            <a href="services.html#booking" id="pd-service-btn" class="btn btn-lg btn-secondary" style="flex:1; min-width:220px; justify-content:center; gap:0.5rem;">
+              <span>Book Installation &amp; Service</span>
+              <span>🛠️</span>
+            </a>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:1.5rem; font-size:0.85rem; color:var(--accent-teal-light); background:rgba(196,162,96,0.08); border:1px solid rgba(196,162,96,0.25); border-radius:10px; padding:0.65rem 1rem;">
+            <span>📍</span>
+            <span>Available for in-store viewing at our Showroom or direct certified home delivery &amp; hookup.</span>
+          </div>
+
+          <!-- Delivery & Installation Perks -->
+          <div
+            style="border-top:1px solid var(--border-subtle); padding-top:1.5rem; display:grid; grid-template-columns:1fr 1fr; gap:1rem; font-size:0.85rem; color:var(--text-muted);">
+            <div><strong>Free Showroom Delivery</strong><br>Within 24-48 Hours</div>
+            <div>🛠️ <strong>Certified Installation</strong><br>By OEM Master Techs</div>
+            <div>♻️ <strong>Old Appliance Haul-Away</strong><br>Eco-friendly recycling</div>
+            <div><strong>Lifetime Tech Support</strong><br>Dedicated hotline access</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Specification Matrix & Features -->
+      <div class="specs-section-wrapper" style="margin-top:3.5rem;">
+        <div class="specs-header">
+          <div class="specs-header-left">
+            <span class="section-subtitle">⚙️ Technical Specifications</span>
+            <h2 class="heading-lg" style="margin-top:0.3rem; margin-bottom:0;">Engineered Performance & Build Details</h2>
+          </div>
+          <div class="specs-header-badge">
+            <span class="badge badge-teal">OEM Factory Certified</span>
+          </div>
+        </div>
+
+        <div class="specs-grid" id="pd-spec-table">
+          <!-- Rendered dynamically by js/app.js -->
+        </div>
+      </div>
+
+      <!-- Customer Reviews & Form -->
+      <div
+        style="margin-top:4rem; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:2.5rem;">
+        <h3 class="heading-md" style="margin-bottom:1.5rem;">Verified Customer Reviews</h3>
+
+        <div style="display:grid; grid-template-columns:1fr 2fr; gap:2.5rem;">
+          <div
+            style="text-align:center; padding:1.5rem; background:var(--bg-tertiary); border-radius:var(--radius-md);">
+            <div style="font-size:3.5rem; font-weight:800; color:var(--accent-teal); line-height:1;">4.9</div>
+            <div class="stars" style="color:var(--accent-warm-gold); justify-content:center; margin:0.5rem 0;">★★★★★
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-muted);">Based on 128 verified customer ratings</p>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:1rem;">
+            <div style="border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+              <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;">
+                <strong>Michael Vance</strong>
+                <span style="font-size:0.8rem; color:var(--text-muted);">2 days ago</span>
+              </div>
+              <div class="stars" style="color:var(--accent-warm-gold); font-size:0.85rem; margin-bottom:0.4rem;">★★★★★
+              </div>
+              <p style="font-size:0.9rem; color:var(--text-secondary);">
+                "The matte black finish looks breathtaking in our new kitchen. Temperature precision is rock solid and
+                quiet as a whisper."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ULTRA-PROFESSIONAL SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+
+        
+    <!-- ═══ REDESIGNED NEWSLETTER ═══ -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-inner">
+
+        <!-- Left: Editorial Content -->
+        <div class="newsletter-left">
+          <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+          <h2 class="newsletter-headline">Stay Ahead with<br><span>Expert Appliance Insights</span></h2>
+          <p class="newsletter-subtext">Join 18,000+ homeowners who get exclusive deals, pro maintenance tips, and priority repair dispatch — all in one weekly email.</p>
+
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <span><strong>$50 OFF</strong> your first appliance order, instantly</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Monthly pro tips from OEM-certified master techs</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Priority diagnostic dispatch alerts before public queue</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Warranty renewal reminders and AMC plan offers</span>
+            </div>
+          </div>
+
+          <div class="newsletter-social-proof">
+            <div class="newsletter-avatars">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Member">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Member">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Member">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Member">
+            </div>
+            <div class="newsletter-proof-text">
+              <strong>18,240+ VIP Members</strong><br>
+              ★★★★★ Loved by homeowners across the region
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form Card -->
+        <div class="newsletter-right">
+          <div class="newsletter-offer-badge">
+            <div class="newsletter-offer-text">
+              <strong>Exclusive Welcome Offer — $50 OFF</strong>
+              <span>Applied automatically on your first order after signup</span>
+            </div>
+          </div>
+
+          <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5rem 0;\'><div style=\'font-size:2rem; margin-bottom:0.75rem;\'>✅</div><div style=\'font-weight:800; color:var(--accent-teal); font-size:1.05rem;\'>You\'re in! Welcome to the VIP Club.</div><p style=\'color:var(--text-muted); font-size:0.88rem; margin-top:0.5rem;\'>Check your inbox for your $50 coupon code.</p></div>';">
+            <label class="newsletter-form-label">Your email address</label>
+            <div class="newsletter-field">
+              <input type="email" class="newsletter-email-input" placeholder="yourname@email.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="newsletter-submit">Join Free — Get $50 OFF →</button>
+          </form>
+
+          <div class="newsletter-privacy">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            No spam, ever. Unsubscribe anytime. Your data is never sold.
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+    <!-- Layer 2: 4 Service Guarantees -->
+    <div class="footer-guarantee-bar">
+      <div class="container">
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🚚</div>
+            <div class="guarantee-text">
+              <strong>Free Express Shipping</strong>
+              <span>On all appliance orders over $499</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🛡️</div>
+            <div class="guarantee-text">
+              <strong>10-Year Inverter Protection</strong>
+              <span>Factory authorized zero-deductible warranty</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🔧</div>
+            <div class="guarantee-text">
+              <strong>Certified OEM Hookup</strong>
+              <span>Master technician installation included</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">📞</div>
+            <div class="guarantee-text">
+              <strong>24/7 Service Hotline</strong>
+              <span>Direct master technician emergency dispatch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3: Main 5-Column Navigation -->
+    <div class="footer-main-section">
+      <div class="container">
+        <div class="footer-5col-grid">
+
+          <!-- Col 1: Brand & Bio -->
+          <div>
+            <a href="index.html" class="brand-logo">
+              <div class="logo-icon">V</div>
+              <div class="logo-text">
+                VORTEX<span>.</span>
+                <span class="logo-tagline">Appliance Store & Service Center</span>
+              </div>
+            </a>
+            <p class="footer-brand-p">
+              Premier home appliance showroom & factory-authorized master service center. Certified sales, professional installation, and 24/7 service since 2010.
+            </p>
+            <div class="footer-contact-pills">
+              <div class="contact-pill-item"><strong>+1 (800) 555-VORTEX</strong></div>
+              <div class="contact-pill-item">support@vortex.com</div>
+            </div>
+            <div class="social-links-row">
+              <a href="https://facebook.com/vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook">FB</a>
+              <a href="https://instagram.com/vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram">IG</a>
+              <a href="https://youtube.com/@vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="YouTube">YT</a>
+              <a href="https://linkedin.com/company/vortex-appliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">LN</a>
+              <a href="https://x.com/vortexcare" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Twitter / X">X</a>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links (Matches Navbar Exactly) -->
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Showroom Categories -->
+          <div>
+            <h4 class="footer-col-title">Store Catalog</h4>
+            <ul class="footer-nav-list">
+              <li><a href="products.html?category=Refrigerators">Flagship Refrigerators</a></li>
+              <li><a href="products.html?category=Washing%20Machines">Smart Washers &amp; Dryers</a></li>
+              <li><a href="products.html?category=Air%20Conditioners">Inverter Air Conditioners</a></li>
+              <li><a href="products.html?category=Built-In%20Ovens">Built-In Pyrolytic Ovens</a></li>
+              <li><a href="products.html?category=Dishwashers">Quiet Dishwashers</a></li>
+              <li><a href="products.html?category=Vacuum%20Cleaners">Cordless Stick Vacuums</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Master Repair Services -->
+          <div>
+            <h4 class="footer-col-title">Master Service Center</h4>
+            <ul class="footer-nav-list">
+              <li><a href="services.html#booking">Compressor &amp; Motor Repair</a></li>
+              <li><a href="services.html#booking">AC Chemical Wash &amp; Service</a></li>
+              <li><a href="services.html#booking">Washer Drum Calibration</a></li>
+              <li><a href="services.html#booking">Same-Day Emergency Dispatch</a></li>
+              <li><a href="services.html#booking">100% Factory OEM Parts</a></li>
+              <li><a href="services.html#booking">Annual Care Maintenance</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Showroom Hours & Location -->
+          <div>
+            <h4 class="footer-col-title">Store &amp; Service Hours</h4>
+            <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.5;">
+              <strong>Flagship Store:</strong> 742 Evergreen Terrace, Tech District, NY 10001
+            </p>
+            <div class="footer-hours-box">
+              <div class="hours-row">
+                <span>Mon – Sat:</span>
+                <strong style="color:var(--text-primary);">8:00 AM – 9:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Sunday:</span>
+                <strong style="color:var(--text-primary);">10:00 AM – 6:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Emergency:</span>
+                <strong style="color:var(--accent-teal);">24/7/365 Open</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 4: Bottom Security Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container bottom-bar-inner">
+        <div>© 2026 VORTEX Home Appliances &amp; Care Inc. All Rights Reserved.</div>
+        <div class="legal-links-row">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms of Service</a>
+          <span>•</span>
+          <a href="warranty.html">OEM Warranty</a>
+          <span>•</span>
+          <a href="sitemap.html">Site Map</a>
+        </div>
+        <div class="payment-badges-row">
+          <span class="payment-chip">VISA</span>
+          <span class="payment-chip">MasterCard</span>
+          <span class="payment-chip">AMEX</span>
+          <span class="payment-chip">Apple Pay</span>
+          <span class="payment-chip">ISO-9001</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <button class="back-to-top" id="back-to-top-btn" title="Scroll to top">↑</button>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

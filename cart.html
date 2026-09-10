@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Your Cart - VORTEX Home Appliance Store &amp; Service Center</title>
+<meta name="description" content="Review your selected appliances, adjust quantities, and proceed to checkout at VORTEX Home Appliance Store."/>
+<!-- Theme script loaded synchronously to prevent FOUC -->
+<script src="js/theme.js"></script>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+<style>
+/* ==============================================================
+   CART PAGE SPECIFIC STYLES — HIGH CONTRAST IN DARK & LIGHT MODES
+   ============================================================== */
+
+/* --- Hero Section --- */
+.cart-page-hero {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-medium);
+  padding: 2.75rem 0 2.25rem;
+  transition: background var(--transition-normal);
+}
+.cart-page-hero h1 {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.02em;
+}
+.cart-page-hero p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+  max-width: 600px;
+}
+.cart-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.85rem;
+  font-weight: 500;
+}
+.cart-breadcrumb a {
+  color: var(--accent-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-fast);
+}
+.cart-breadcrumb a:hover {
+  color: var(--accent-teal-light);
+  text-decoration: underline;
+}
+.cart-breadcrumb span.crumb-sep {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+.cart-breadcrumb span.crumb-current {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* --- Progress Steps --- */
+.cart-progress {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+}
+.cart-progress-step {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+.cart-progress-step.active {
+  color: var(--accent-teal);
+  font-weight: 700;
+}
+.cart-progress-step .step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-accent);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+.cart-progress-step.active .step-num {
+  background: var(--accent-teal);
+  border-color: var(--accent-teal);
+  color: #06080a;
+  font-weight: 800;
+  box-shadow: 0 0 14px var(--accent-teal-glow);
+}
+.cart-progress-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border-medium);
+  margin: 0 0.85rem;
+  max-width: 70px;
+}
+
+/* --- Main Layout --- */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2.25rem;
+  align-items: start;
+  padding: 3rem 0 5rem;
+}
+@media (max-width: 960px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Panels --- */
+.cart-items-panel,
+.cart-summary-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
+}
+.cart-summary-panel {
+  position: sticky;
+  top: 95px;
+}
+.cart-panel-header,
+.cart-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.6rem;
+  border-bottom: 1px solid var(--border-medium);
+  background: var(--bg-secondary);
+  transition: background var(--transition-normal);
+}
+.cart-panel-header h2,
+.cart-summary-header h2 {
+  font-size: 1.08rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin: 0;
+}
+.cart-panel-header span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+}
+
+/* --- Cart Items List --- */
+.cart-item {
+  display: grid;
+  grid-template-columns: 95px 1fr auto;
+  gap: 1.35rem;
+  align-items: center;
+  padding: 1.35rem 1.6rem;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+.cart-item:last-child {
+  border-bottom: none;
+}
+.cart-item:hover {
+  background: rgba(196, 162, 96, 0.03);
+}
+.cart-item-img {
+  width: 95px;
+  height: 85px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-medium);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+.cart-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.cart-item-info {
+  min-width: 0;
+}
+.cart-item-brand {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+.cart-item-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cart-item-price-single {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.cart-item-warranty {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.cart-item-warranty span {
+  color: var(--accent-teal);
+  font-weight: 800;
+}
+.cart-item-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.cart-item-total {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-teal);
+}
+.cart-qty-row {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+.cart-qty-btn {
+  background: var(--bg-tertiary);
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+.cart-qty-btn:hover {
+  background: var(--accent-teal);
+  color: #06080a;
+}
+.cart-qty-val {
+  background: var(--bg-card);
+  width: 38px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border-left: 1px solid var(--border-medium);
+  border-right: 1px solid var(--border-medium);
+}
+.cart-remove-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ef4444;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0;
+  transition: opacity var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  opacity: 0.85;
+}
+.cart-remove-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* --- Empty Cart State --- */
+.cart-empty {
+  text-align: center;
+  padding: 4.5rem 2rem;
+}
+.cart-empty-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem;
+  color: var(--accent-teal);
+  opacity: 0.8;
+}
+.cart-empty h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  margin-bottom: 0.5rem;
+}
+.cart-empty p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
+/* --- Order Summary Body --- */
+.cart-summary-body {
+  padding: 1.6rem;
+}
+.coupon-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.coupon-input {
+  flex: 1;
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.9rem;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+.coupon-input:focus {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 2px var(--accent-teal-glow);
+}
+.coupon-input::placeholder {
+  color: var(--text-muted);
+}
+.coupon-apply-btn {
+  background: var(--accent-teal);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1.15rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #06080a;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+.coupon-apply-btn:hover {
+  background: var(--accent-teal-light);
+  transform: translateY(-1px);
+}
+.coupon-msg {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: -0.75rem;
+  margin-bottom: 1.25rem;
+  display: none;
+}
+.coupon-msg.success {
+  color: #10b981;
+  display: block;
+}
+.coupon-msg.error {
+  color: #ef4444;
+  display: block;
+}
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 0;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.summary-line > span:last-child {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+.summary-line:last-of-type {
+  border-bottom: none;
+}
+.summary-line.total-line {
+  font-size: 1.12rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  padding-top: 1.1rem;
+  margin-top: 0.35rem;
+  border-top: 2px solid var(--border-medium);
+}
+.summary-line.total-line > span:first-child {
+  color: var(--text-primary);
+}
+.summary-line .discount-val {
+  color: #10b981 !important;
+  font-weight: 700;
+}
+.summary-line .total-price {
+  color: var(--accent-teal) !important;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.checkout-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 1.35rem;
+  font-size: 1rem;
+  padding: 0.95rem 1.5rem;
+  font-weight: 800;
+}
+.secure-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 0.95rem;
+  font-weight: 500;
+}
+.secure-badge svg {
+  color: var(--accent-teal);
+}
+.cart-guarantees {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding: 1.15rem 1.6rem;
+  border-top: 1px solid var(--border-medium);
+  background: var(--bg-secondary);
+  transition: background var(--transition-normal);
+}
+.cart-guarantee-item {
+  text-align: center;
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+.cart-guarantee-item strong {
+  display: block;
+  color: var(--accent-teal);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-top: 0.35rem;
+}
+.cart-guarantee-item svg {
+  margin: 0 auto;
+  color: var(--accent-teal);
+}
+
+/* --- Recommended Section --- */
+.cart-recommended {
+  margin-top: 3rem;
+}
+.cart-recommended h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+/* ==============================================================
+   EXPLICIT LIGHT MODE ADAPTATIONS FOR CART PAGE
+   ============================================================== */
+html[data-theme="light"] .cart-page-hero {
+  background: #ede8e0;
+  border-bottom: 1px solid #c8bfb0;
+}
+html[data-theme="light"] .cart-items-panel,
+html[data-theme="light"] .cart-summary-panel {
+  background: #ffffff;
+  border-color: #c8bfb0;
+  box-shadow: 0 8px 30px rgba(60, 40, 20, 0.08);
+}
+html[data-theme="light"] .cart-panel-header,
+html[data-theme="light"] .cart-summary-header {
+  background: #f7f3ed;
+  border-bottom: 1px solid #c8bfb0;
+}
+html[data-theme="light"] .cart-item:hover {
+  background: #faf7f2;
+}
+html[data-theme="light"] .cart-item-img {
+  background: #f7f3ed;
+  border-color: #ddd5c8;
+}
+html[data-theme="light"] .cart-qty-row {
+  border-color: #c8bfb0;
+}
+html[data-theme="light"] .cart-qty-btn {
+  background: #ede6dc;
+  color: #140f0a;
+}
+html[data-theme="light"] .cart-qty-btn:hover {
+  background: var(--accent-teal);
+  color: #ffffff;
+}
+html[data-theme="light"] .cart-qty-val {
+  background: #ffffff;
+  color: #140f0a;
+  border-color: #c8bfb0;
+}
+html[data-theme="light"] .coupon-input {
+  background: #fdfbf7;
+  border-color: #c8bfb0;
+  color: #140f0a;
+}
+html[data-theme="light"] .coupon-input::placeholder {
+  color: #6e5f50;
+}
+html[data-theme="light"] .coupon-apply-btn {
+  background: var(--accent-teal);
+  color: #ffffff;
+}
+html[data-theme="light"] .cart-guarantees {
+  background: #f7f3ed;
+  border-top: 1px solid #c8bfb0;
+}
+html[data-theme="light"] .cart-progress-step {
+  color: #3d3025;
+}
+html[data-theme="light"] .cart-progress-step.active {
+  color: var(--accent-teal);
+}
+html[data-theme="light"] .cart-progress-step .step-num {
+  background: #ede6dc;
+  border-color: #c8bfb0;
+  color: #140f0a;
+}
+html[data-theme="light"] .cart-progress-step.active .step-num {
+  background: var(--accent-teal);
+  border-color: var(--accent-teal);
+  color: #ffffff;
+}
+html[data-theme="light"] .cart-progress-line {
+  background: #c8bfb0;
+}
+html[data-theme="light"] #checkout-modal > div {
+  background: #ffffff !important;
+  border-color: #c8bfb0 !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2) !important;
+}
+html[data-theme="light"] #checkout-order-summary {
+  background: #f7f3ed !important;
+  border: 1px solid #ddd5c8;
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement Top Bar -->
+<div class="top-bar">
+  <div class="container top-bar-content">
+    <div class="top-bar-left">
+      <div class="top-bar-item">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--accent-teal);flex-shrink:0;">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>Authorized Appliance Store &amp; Service Partner: LG, Samsung, Bosch &amp; Miele</span>
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-bar-item">
+        <span style="font-weight:700;color:var(--accent-teal);">Free Professional Installation on Major Appliance Purchases</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand-logo">
+      <div class="logo-icon">V</div>
+      <div class="logo-text">
+        VORTEX<span>.</span>
+        <span class="logo-tagline">Appliance Store &amp; Service Center</span>
+      </div>
+    </a>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="header-theme-controls" style="display:flex;align-items:center;gap:.4rem;">
+        <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 11 3 7 7 3"/><line x1="21" y1="7" x2="3" y2="7"/><line x1="21" y1="17" x2="9" y2="17"/><polyline points="13 21 9 17 13 13"/></svg>
+        </button>
+      </div>
+      <a href="cart.html" class="header-cart-btn active" id="header-cart-btn" title="View Shopping Cart">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-badge" id="header-cart-count">0</span>
+      </a>
+      <a href="services.html#booking" class="btn btn-sm btn-primary header-cta">Book a Service</a>
+      <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Navigation">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+<aside class="mobile-nav-drawer" id="mobile-drawer">
+  <div class="mobile-nav-header">
+    <a href="index.html" class="brand-logo">
+      <div class="logo-icon">V</div>
+      <div class="logo-text">VORTEX<span class="logo-tagline">Appliance Store &amp; Service Center</span></div>
+    </a>
+    <button class="btn-icon" id="mobile-close-btn">&#x2715;</button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="home2.html" class="mobile-nav-link">Home 2</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="products.html" class="mobile-nav-link">Products</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="blog.html" class="mobile-nav-link">Blog</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <a href="cart.html" class="mobile-nav-link active">My Cart</a>
+  </div>
+  <div class="mobile-drawer-cta-wrap">
+    <a href="services.html#booking" class="mobile-drawer-booking-btn"><span>Book a Repair</span></a>
+  </div>
+  <div class="mobile-drawer-utility">
+    <button class="mobile-util-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <span>Theme</span>
+    </button>
+    <button class="mobile-util-btn dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 11 3 7 7 3"/><line x1="21" y1="7" x2="3" y2="7"/><line x1="21" y1="17" x2="9" y2="17"/><polyline points="13 21 9 17 13 13"/></svg>
+      <span>RTL / LTR</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Cart Page Hero -->
+<section class="cart-page-hero">
+  <div class="container">
+    <div class="cart-breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="crumb-sep">&#x203A;</span>
+      <a href="products.html">Products</a>
+      <span class="crumb-sep">&#x203A;</span>
+      <span class="crumb-current">Shopping Cart</span>
+    </div>
+    <h1>Your Shopping Cart</h1>
+    <p>Review your selected appliances, adjust quantities, and proceed to checkout with certified delivery and installation.</p>
+    <div class="cart-progress">
+      <div class="cart-progress-step active"><span class="step-num">1</span><span>Cart Review</span></div>
+      <div class="cart-progress-line"></div>
+      <div class="cart-progress-step"><span class="step-num">2</span><span>Delivery Details</span></div>
+      <div class="cart-progress-line"></div>
+      <div class="cart-progress-step"><span class="step-num">3</span><span>Confirm Order</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Cart Main Content -->
+<main>
+  <div class="container">
+    <div class="cart-layout">
+      <!-- Left Column: Items Panel -->
+      <div>
+        <div class="cart-items-panel">
+          <div class="cart-panel-header">
+            <h2>Cart Items</h2>
+            <span id="cart-item-count-label">0 items</span>
+          </div>
+          <div id="cart-items-list"></div>
+        </div>
+
+        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+          <a href="products.html" class="btn btn-secondary" style="font-size:.88rem;font-weight:600;">&#8592; Continue Shopping</a>
+          <button id="clear-cart-btn" class="btn btn-secondary" style="font-size:.88rem;font-weight:600;color:#ef4444;border-color:rgba(239,68,68,.35);" onclick="clearEntireCart()">Remove All Items</button>
+        </div>
+
+        <!-- Recommended Products Section -->
+        <div class="cart-recommended" id="cart-recommended-section">
+          <h2>You Might Also Like</h2>
+          <div class="product-grid" id="cart-recommended-grid" style="grid-template-columns:repeat(2,1fr);"></div>
+        </div>
+      </div>
+
+      <!-- Right Column: Order Summary -->
+      <div>
+        <div class="cart-summary-panel">
+          <div class="cart-summary-header">
+            <h2>Order Summary</h2>
+          </div>
+          <div class="cart-summary-body">
+            <div class="coupon-row">
+              <input type="text" id="coupon-input" class="coupon-input" placeholder="Promo code e.g. VORTEX10"/>
+              <button class="coupon-apply-btn" onclick="applyCoupon()">Apply</button>
+            </div>
+            <div class="coupon-msg" id="coupon-msg"></div>
+
+            <div class="summary-line">
+              <span>Subtotal (<span id="summary-qty">0</span> items)</span>
+              <span id="summary-subtotal">$0.00</span>
+            </div>
+            <div class="summary-line" id="discount-line" style="display:none;">
+              <span>Promo Discount</span>
+              <span class="discount-val" id="summary-discount">-$0.00</span>
+            </div>
+            <div class="summary-line">
+              <span>Delivery &amp; Installation</span>
+              <span style="color:#10b981;font-weight:700;">FREE</span>
+            </div>
+            <div class="summary-line">
+              <span>Estimated Tax (10%)</span>
+              <span id="summary-tax">$0.00</span>
+            </div>
+            <div class="summary-line total-line">
+              <span>Total Payable</span>
+              <span class="total-price" id="summary-total">$0.00</span>
+            </div>
+
+            <button class="btn btn-primary checkout-btn" id="checkout-btn" onclick="proceedCheckout()">
+              Proceed to Checkout &#x2192;
+            </button>
+
+            <div class="secure-badge">
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <span>100% Secure &amp; Encrypted Checkout</span>
+            </div>
+          </div>
+
+          <!-- Trust Guarantees -->
+          <div class="cart-guarantees">
+            <div class="cart-guarantee-item">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              <strong>OEM Warranty</strong>
+              <span>Manufacturer Protected</span>
+            </div>
+            <div class="cart-guarantee-item">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="1" y="3" width="15" height="13" rx="1"/>
+                <path d="M16 8h4a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-3"/>
+              </svg>
+              <strong>Free Delivery</strong>
+              <span>Insured Transport</span>
+            </div>
+            <div class="cart-guarantee-item">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              </svg>
+              <strong>Pro Install</strong>
+              <span>Certified Technicians</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="drawer-backdrop" style="display:none;">
+  <div style="background:var(--bg-card);border:1.5px solid var(--border-medium);border-radius:var(--radius-lg);width:92%;max-width:580px;max-height:88vh;overflow-y:auto;margin:4vh auto;padding:2.25rem;position:relative;box-shadow:var(--shadow-lg);">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.5rem;border-bottom:1px solid var(--border-subtle);padding-bottom:1rem;">
+      <div>
+        <span class="badge badge-teal" style="margin-bottom:.4rem;">Fast &amp; Certified Checkout</span>
+        <h3 class="heading-md" style="margin:0;color:var(--text-primary);">Complete Your Order</h3>
+      </div>
+      <button class="btn-icon" onclick="closeCheckoutModal()">&#x2715;</button>
+    </div>
+
+    <div id="checkout-order-summary" style="background:var(--bg-tertiary);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.15rem;margin-bottom:1.5rem;font-size:.88rem;"></div>
+
+    <form id="checkout-form" onsubmit="submitOrder(event)">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+        <div class="form-group">
+          <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Full Name *</label>
+          <input type="text" class="form-control" id="co-name" required placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Phone *</label>
+          <input type="tel" class="form-control" id="co-phone" required placeholder="+1 (555) 000-0000">
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Email Address *</label>
+        <input type="email" class="form-control" id="co-email" required placeholder="john@example.com">
+      </div>
+      <div class="form-group" style="margin-bottom:1rem;">
+        <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Delivery Address *</label>
+        <input type="text" class="form-control" id="co-address" required placeholder="Street, City, State, ZIP">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem;">
+        <div class="form-group">
+          <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Delivery Date</label>
+          <input type="date" class="form-control" id="co-date">
+        </div>
+        <div class="form-group">
+          <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Installation Slot</label>
+          <select class="form-select" id="co-slot">
+            <option>Morning (9am - 12pm)</option>
+            <option>Afternoon (12pm - 4pm)</option>
+            <option>Evening (4pm - 7pm)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group" style="margin-bottom:1.5rem;">
+        <label class="form-label" style="font-size:.85rem;font-weight:600;color:var(--text-secondary);">Special Delivery Instructions</label>
+        <textarea class="form-control" rows="2" placeholder="Building access code, floor/apartment number, etc."></textarea>
+      </div>
+      <div style="display:flex;gap:.75rem;">
+        <button type="submit" class="btn btn-primary" style="flex:1;justify-content:center;font-weight:800;">Confirm &amp; Place Order &#x2192;</button>
+        <button type="button" class="btn btn-secondary" onclick="closeCheckoutModal()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Site Footer -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand-col">
+      <a href="index.html" class="brand-logo footer-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">VORTEX<span class="logo-tagline">Appliance Store &amp; Service Center</span></div>
+      </a>
+      <p class="footer-brand-desc">Your trusted destination for premium home appliances and professional repair services.</p>
+    </div>
+    <div class="footer-links-col">
+      <h4 class="footer-col-title">Quick Links</h4>
+      <ul class="footer-link-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">My Cart</a></li>
+      </ul>
+    </div>
+    <div class="footer-links-col">
+      <h4 class="footer-col-title">Shop Categories</h4>
+      <ul class="footer-link-list">
+        <li><a href="products.html?cat=refrigerators">Refrigerators</a></li>
+        <li><a href="products.html?cat=washing-machines">Washing Machines</a></li>
+        <li><a href="products.html?cat=air-conditioners">Air Conditioners</a></li>
+        <li><a href="products.html?cat=ovens">Built-In Ovens</a></li>
+        <li><a href="products.html?cat=microwaves">Microwaves</a></li>
+        <li><a href="products.html?cat=dishwashers">Dishwashers</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact-col">
+      <h4 class="footer-col-title">Contact &amp; Hours</h4>
+      <ul class="footer-contact-list">
+        <li>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>123 Appliance Boulevard, Tech District</span>
+        </li>
+        <li>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 19.95 19.95 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+1 (555) 019-VRTX</span>
+        </li>
+        <li>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mon-Sat: 9am-7pm | Sun: 10am-5pm</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>&copy; 2025 VORTEX Home Appliance Store &amp; Service Center. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="sitemap.html">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+var VALID_COUPONS = { VORTEX10: 10, SAVE15: 15, FIRST20: 20, APPLIANCE5: 5 };
+var appliedDiscount = 0;
+
+function getCart() {
+  return JSON.parse(localStorage.getItem('vortex_cart') || '[]');
+}
+
+function saveCart(c) {
+  localStorage.setItem('vortex_cart', JSON.stringify(c));
+  var t = c.reduce(function(s, i) { return s + (i.quantity || 1); }, 0);
+  document.querySelectorAll('#header-cart-count, .cart-badge').forEach(function(el) {
+    el.textContent = t;
+  });
+}
+
+function fmt(n) {
+  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function renderCartPage() {
+  var cart = getCart();
+  var listEl = document.getElementById('cart-items-list');
+  var cntEl = document.getElementById('cart-item-count-label');
+  var qty = cart.reduce(function(s, i) { return s + (i.quantity || 1); }, 0);
+  cntEl.textContent = qty + ' item' + (qty !== 1 ? 's' : '');
+
+  if (cart.length === 0) {
+    listEl.innerHTML = '<div class="cart-empty">' +
+      '<svg class="cart-empty-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' +
+      '<h3>Your cart is empty</h3><p>Explore our premium showroom appliances and add products to your cart.</p>' +
+      '<a href="products.html" class="btn btn-primary">Browse Showroom &#x2192;</a></div>';
+    document.getElementById('clear-cart-btn').style.display = 'none';
+    updateSummary(cart);
+    renderRecommended(cart);
+    return;
+  }
+
+  document.getElementById('clear-cart-btn').style.display = '';
+  listEl.innerHTML = cart.map(function(item) {
+    var lt = (item.price || 0) * (item.quantity || 1);
+    return '<div class="cart-item">' +
+      '<div class="cart-item-img"><img src="' + item.image + '" alt="' + item.name + '" loading="lazy"/></div>' +
+      '<div class="cart-item-info">' +
+        '<div class="cart-item-brand">' + (item.brand || 'VORTEX') + '</div>' +
+        '<div class="cart-item-name" title="' + item.name + '">' + item.name + '</div>' +
+        '<div class="cart-item-price-single">Unit Price: ' + fmt(item.price || 0) + '</div>' +
+        (item.warranty ? '<div class="cart-item-warranty"><span>&#x2713;</span>' + item.warranty + ' Warranty Included</div>' : '') +
+      '</div>' +
+      '<div class="cart-item-controls">' +
+        '<div class="cart-item-total">' + fmt(lt) + '</div>' +
+        '<div class="cart-qty-row">' +
+          '<button class="cart-qty-btn" onclick="changeQty('' + item.id + '', -1)" title="Decrease quantity">&#x2212;</button>' +
+          '<div class="cart-qty-val">' + (item.quantity || 1) + '</div>' +
+          '<button class="cart-qty-btn" onclick="changeQty('' + item.id + '', 1)" title="Increase quantity">+</button>' +
+        '</div>' +
+        '<button class="cart-remove-btn" onclick="removeFromCart('' + item.id + '')">' +
+          '<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m5 0V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/></svg>Remove' +
+        '</button>' +
+      '</div></div>';
+  }).join('');
+
+  updateSummary(cart);
+  renderRecommended(cart);
+}
+
+function changeQty(id, d) {
+  var c = getCart();
+  var item = c.find(function(x) { return x.id === id; });
+  if (!item) return;
+  item.quantity = Math.max(1, (item.quantity || 1) + d);
+  saveCart(c);
+  renderCartPage();
+}
+
+function removeFromCart(id) {
+  saveCart(getCart().filter(function(i) { return i.id !== id; }));
+  renderCartPage();
+}
+
+window.clearEntireCart = function() {
+  if (confirm('Are you sure you want to remove all items from your cart?')) {
+    saveCart([]);
+    renderCartPage();
+  }
+};
+
+function updateSummary(cart) {
+  var sub = cart.reduce(function(s, i) { return s + (i.price || 0) * (i.quantity || 1); }, 0);
+  var qty = cart.reduce(function(s, i) { return s + (i.quantity || 1); }, 0);
+  var disc = sub * (appliedDiscount / 100);
+  var tax = (sub - disc) * 0.10;
+  var total = sub - disc + tax;
+
+  document.getElementById('summary-qty').textContent = qty;
+  document.getElementById('summary-subtotal').textContent = fmt(sub);
+  document.getElementById('summary-tax').textContent = fmt(tax);
+  document.getElementById('summary-total').textContent = fmt(total);
+
+  var dl = document.getElementById('discount-line');
+  if (appliedDiscount > 0) {
+    dl.style.display = 'flex';
+    document.getElementById('summary-discount').textContent = '-' + fmt(disc);
+  } else {
+    dl.style.display = 'none';
+  }
+
+  var cb = document.getElementById('checkout-btn');
+  if (cart.length === 0) {
+    cb.disabled = true;
+    cb.style.opacity = '0.5';
+    cb.style.cursor = 'not-allowed';
+  } else {
+    cb.disabled = false;
+    cb.style.opacity = '';
+    cb.style.cursor = '';
+  }
+}
+
+window.applyCoupon = function() {
+  var code = document.getElementById('coupon-input').value.trim().toUpperCase();
+  var msg = document.getElementById('coupon-msg');
+  if (!code) {
+    msg.textContent = 'Please enter a promo code.';
+    msg.className = 'coupon-msg error';
+    return;
+  }
+  if (VALID_COUPONS[code]) {
+    appliedDiscount = VALID_COUPONS[code];
+    msg.textContent = 'Coupon applied! ' + appliedDiscount + '% discount added.';
+    msg.className = 'coupon-msg success';
+    updateSummary(getCart());
+  } else {
+    appliedDiscount = 0;
+    msg.textContent = 'Invalid promo code. Try: VORTEX10, SAVE15, FIRST20, APPLIANCE5';
+    msg.className = 'coupon-msg error';
+    updateSummary(getCart());
+  }
+};
+
+function renderRecommended(cart) {
+  var sec = document.getElementById('cart-recommended-section');
+  var grid = document.getElementById('cart-recommended-grid');
+  var ids = cart.map(function(i) { return i.id; });
+  var all = window._vortexProducts || [];
+  var picks = all.filter(function(p) { return ids.indexOf(p.id) === -1; }).sort(function() { return 0.5 - Math.random(); }).slice(0, 2);
+  if (!picks.length) {
+    sec.style.display = 'none';
+    return;
+  }
+  sec.style.display = '';
+  grid.innerHTML = picks.map(function(p) {
+    return window.renderProductCard ? window.renderProductCard(p) : '';
+  }).join('');
+}
+
+window.proceedCheckout = function() {
+  var cart = getCart();
+  if (!cart.length) return;
+  var modal = document.getElementById('checkout-modal');
+  modal.style.display = 'flex';
+  modal.style.alignItems = 'flex-start';
+  document.body.style.overflow = 'hidden';
+
+  var sub = cart.reduce(function(s, i) { return s + (i.price || 0) * (i.quantity || 1); }, 0);
+  var disc = sub * (appliedDiscount / 100);
+  var tax = (sub - disc) * 0.10;
+  var total = sub - disc + tax;
+
+  document.getElementById('checkout-order-summary').innerHTML =
+    '<div style="font-weight:700;color:var(--text-primary);margin-bottom:.75rem;font-size:.95rem;">Order Summary Review</div>' +
+    cart.map(function(i) {
+      return '<div style="display:flex;justify-content:space-between;padding:.35rem 0;font-size:.85rem;color:var(--text-secondary);">' +
+        '<span>' + i.name + ' &times; ' + (i.quantity || 1) + '</span>' +
+        '<span style="font-weight:600;color:var(--text-primary);">' + fmt((i.price || 0) * (i.quantity || 1)) + '</span></div>';
+    }).join('') +
+    '<div style="border-top:1.5px solid var(--border-medium);margin-top:.75rem;padding-top:.75rem;display:flex;justify-content:space-between;font-weight:800;font-size:1.05rem;">' +
+    '<span style="color:var(--text-primary);">Total Payable</span><span style="color:var(--accent-teal);">' + fmt(total) + '</span></div>';
+
+  var today = new Date().toISOString().split('T')[0];
+  document.getElementById('co-date').min = today;
+  document.getElementById('co-date').value = today;
+};
+
+window.closeCheckoutModal = function() {
+  document.getElementById('checkout-modal').style.display = 'none';
+  document.body.style.overflow = '';
+};
+
+window.submitOrder = function(e) {
+  e.preventDefault();
+  var name = document.getElementById('co-name').value.trim();
+  document.getElementById('checkout-form').innerHTML =
+    '<div style="text-align:center;padding:2rem 0;">' +
+    '<svg width="56" height="56" fill="none" stroke="var(--accent-teal)" stroke-width="2" viewBox="0 0 24 24" style="margin:0 auto 1.25rem;display:block;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>' +
+    '<h3 style="color:var(--accent-teal);font-family:var(--font-heading);font-size:1.4rem;margin-bottom:.6rem;">Order Confirmed, ' + name + '!</h3>' +
+    '<p style="color:var(--text-secondary);font-size:.95rem;max-width:420px;margin:0 auto 1.5rem;line-height:1.5;">Thank you for shopping with VORTEX. Your order receipt and installation schedule details have been dispatched to your email.</p>' +
+    '<button class="btn btn-primary" onclick="closeCheckoutModal(); saveCart([]); renderCartPage();">Back to Store</button>' +
+    '</div>';
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  renderCartPage();
+});
+</script>
+</body>
+</html>

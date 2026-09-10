@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VORTEX - Home Appliance Store & Master Service Center</title>
+  <meta name="description"
+    content="Premier home appliance store & certified master service center. Shop top-brand refrigerators, washers, ACs, and ovens with free professional installation and 24/7 repair care.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+          <span>24/7 Service & Repair Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+        </div>
+        <div class="top-bar-item">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+          </svg>
+          <span>Authorized Appliance Store & Service Partner: LG, Samsung, Bosch & Miele</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span>Free Professional Installation on Major Appliance Purchases</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX<span>.</span>
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <div class="header-theme-controls" style="display:flex; align-items:center; gap:0.4rem;">
+          <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+          <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+        </div>
+        <a href="cart.html" class="header-cart-btn" id="header-cart-btn" title="View Shopping Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="header-cart-count">0</span>
+        </a>
+        <a href="services.html#booking" class="btn btn-sm btn-primary header-cta">Book a Service</a>
+        <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+      <button class="btn-icon" id="mobile-close-btn">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home</a>
+      <a href="home2.html" class="mobile-nav-link">Home 2 (Alt View)</a>
+      <a href="about.html" class="mobile-nav-link">About Store & Service Center</a>
+      <a href="products.html" class="mobile-nav-link">Products & Showroom</a>
+      <a href="services.html" class="mobile-nav-link">Services & Repair Booking</a>
+      <a href="blog.html" class="mobile-nav-link">Appliance Blog & Guides</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Store & Service Hub</a>
+    </div>
+    <div class="mobile-drawer-cta-wrap">
+      <a href="services.html#booking" class="mobile-drawer-booking-btn">
+        <span>Book a Repair</span>
+        <span>🛠️</span>
+      </a>
+    </div>
+    <div class="mobile-drawer-utility">
+      <button class="mobile-util-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+      <button class="mobile-util-btn dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+    </div>
+  </aside>
+
+  <!-- Hero Section — Store & Master Service Center -->
+  <section class="hero-section" id="hero">
+    <div class="container hero-grid">
+
+      <!-- Left Hero Content Column -->
+      <div class="hero-content">
+
+        <!-- Live Status & Authorization Badges -->
+        <div class="hero-badge-group">
+          <span class="hero-status-pill">
+            <span class="status-live-pulse"></span>
+            Store Showroom &amp; Master Service Hub
+          </span>
+          <span class="badge badge-gold">OEM Factory Authorized</span>
+        </div>
+
+        <!-- High-Impact Main Heading -->
+        <h1 class="heading-xl hero-title">
+          Premier Home <span class="text-teal">Appliance Store</span> &amp; Certified <span
+            class="text-warm-gold">Master Service Center</span>
+        </h1>
+
+        <!-- High-Contrast Descriptive Copy -->
+        <p class="hero-description">
+          Explore top-rated smart refrigerators, washing machines, inverter ACs, and built-in ovens with official
+          warranties — supported by factory-trained master technicians for white-glove installation, annual care, and
+          24/7 emergency repairs.
+        </p>
+
+        <!-- Value Highlights Buttons (Highlighted) -->
+        <div class="hero-value-pills">
+          <a href="products.html" class="hero-value-item">
+            <span class="hero-value-check">✓</span>
+            <span>Flagship Store Showroom</span>
+          </a>
+          <a href="services.html" class="hero-value-item">
+            <span class="hero-value-check">✓</span>
+            <span>Free Pro Installation</span>
+          </a>
+          <a href="services.html#booking" class="hero-value-item">
+            <span class="hero-value-check">✓</span>
+            <span>Certified Master Repairs</span>
+          </a>
+          <a href="services.html#booking" class="hero-value-item">
+            <span class="hero-value-check">✓</span>
+            <span>2-Hr Emergency Dispatch</span>
+          </a>
+        </div>
+
+        <!-- Primary Dual CTAs -->
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-lg btn-primary hero-btn-store">
+            <span>Explore Appliance Store</span>
+            <span class="btn-arrow-icon">➔</span>
+          </a>
+          <a href="services.html#booking" class="btn btn-lg btn-secondary hero-btn-service">
+            <span>Book Repair Service</span>
+            <span class="btn-arrow-icon">➔</span>
+          </a>
+        </div>
+
+        <!-- 4-Stat High-Trust Proof Strip -->
+        <div class="hero-stats-strip">
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>Years Store &amp; Care</p>
+          </div>
+          <div class="stat-item">
+            <h3>45,000+</h3>
+            <p>Appliances Serviced</p>
+          </div>
+          <div class="stat-item">
+            <h3>99.4%</h3>
+            <p>First-Visit Fix Rate</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Factory OEM Parts</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Hero Media Column -->
+      <div class="hero-media-container">
+        <div class="hero-media-wrapper">
+          <img src="assets/appliance_store_bright.jpg"
+            alt="VORTEX Flagship Home Appliance Store & Master Service Center" class="hero-main-img">
+
+          <!-- Top Floating Status Pill -->
+          <div class="hero-top-badge">
+            <span
+              style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent-teal); box-shadow:0 0 8px var(--accent-teal);"></span>
+            <span>Flagship Store Showroom &amp; Certified Service Hub</span>
+          </div>
+
+          <!-- Bottom Glass Floating Card (Featured Dual Highlight) -->
+          <div class="hero-floating-card">
+            <div class="hero-floating-card-info">
+              <span class="hero-card-tag">Store &amp; Service Assurance</span>
+              <h4 class="hero-card-title">Top-Brand Sales &amp; Certified In-Home Care</h4>
+              <p class="hero-card-sub">0% Financing • 100% OEM Parts • Free Installation • Same-Day Dispatch</p>
+            </div>
+            <a href="services.html#booking" class="btn btn-sm btn-outline-teal hero-card-btn">Book Repair ➔</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Categories Section — Redesigned Visual Appliance Photo Showcase -->
+  <section class="categories-section" style="padding:5rem 0 5.5rem; position:relative; overflow:hidden;">
+
+    <!-- Ambient background glow -->
+    <div
+      style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:900px; height:400px; background:radial-gradient(ellipse, rgba(196,162,96,0.055) 0%, transparent 70%); pointer-events:none;">
+    </div>
+
+    <div class="container" style="position:relative;">
+
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-subtitle">Store Showroom &amp; Catalog</span>
+        <h2 class="heading-lg section-title">Shop by Modern <span style="color:var(--accent-teal);">Appliance
+            Category</span></h2>
+        <p class="section-desc">Explore factory-authorized smart appliances engineered for superior performance, energy
+          savings, and covered by comprehensive service care.</p>
+      </div>
+
+      <!-- 6-Category Photo Showcase Grid -->
+      <div class="cat-showcase-grid">
+
+        <!-- Card 1: Refrigerators -->
+        <a href="products.html?cat=refrigerators" class="cat-showcase-card">
+          <div class="cat-showcase-thumb">
+            <span class="cat-showcase-badge">24 Models</span>
+            <img src="assets/vortex_french_door.jpg" alt="Smart Refrigerators" class="cat-showcase-img" loading="lazy">
+          </div>
+          <div class="cat-showcase-body">
+            <h3 class="cat-showcase-title">
+              <span>Smart Refrigerators</span>
+              <span style="font-size:0.9rem; color:var(--accent-teal);">➔</span>
+            </h3>
+            <p class="cat-showcase-desc">French-door, quad-door, and InstaView smart cooling with twin evaporators and
+              flex zones.</p>
+            <div class="cat-showcase-footer">
+              <span class="cat-showcase-price">From $1,999</span>
+              <span class="cat-showcase-cta">Explore Models ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2: Washing Machines -->
+        <a href="products.html?cat=washing-machines" class="cat-showcase-card">
+          <div class="cat-showcase-thumb">
+            <span class="cat-showcase-badge">18 Models</span>
+            <img src="assets/vortex_washer_ai.jpg" alt="Washers &amp; Dryers" class="cat-showcase-img" loading="lazy">
+          </div>
+          <div class="cat-showcase-body">
+            <h3 class="cat-showcase-title">
+              <span>Washers &amp; Dryers</span>
+              <span style="font-size:0.9rem; color:var(--accent-teal);">➔</span>
+            </h3>
+            <p class="cat-showcase-desc">AI fabric sensing, allergen steam sterilization, and ultra-quiet inverter
+              direct drive motors.</p>
+            <div class="cat-showcase-footer">
+              <span class="cat-showcase-price">From $999</span>
+              <span class="cat-showcase-cta">Explore Models ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3: Air Conditioners -->
+        <a href="products.html?cat=air-conditioners" class="cat-showcase-card">
+          <div class="cat-showcase-thumb">
+            <span class="cat-showcase-badge">15 Models</span>
+            <img src="assets/Vortex Inverter Dual Cool Air Conditioner 1.5 Ton.jpg" alt="Inverter Air Conditioners"
+              class="cat-showcase-img" loading="lazy">
+          </div>
+          <div class="cat-showcase-body">
+            <h3 class="cat-showcase-title">
+              <span>Inverter Air Conditioners</span>
+              <span style="font-size:0.9rem; color:var(--accent-teal);">➔</span>
+            </h3>
+            <p class="cat-showcase-desc">5-Star inverter split units with rapid 18°C cooling, PM2.5 air purification,
+              and Wi-Fi control.</p>
+            <div class="cat-showcase-footer">
+              <span class="cat-showcase-price">From $999</span>
+              <span class="cat-showcase-cta">Explore Models ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4: Smart TVs -->
+        <a href="products.html?cat=tvs" class="cat-showcase-card">
+          <div class="cat-showcase-thumb">
+            <span class="cat-showcase-badge">12 Models</span>
+            <img src="assets/vortex_oled_tv.jpg" alt="4K OLED &amp; QLED Smart TVs" class="cat-showcase-img"
+              loading="lazy">
+          </div>
+          <div class="cat-showcase-body">
+            <h3 class="cat-showcase-title">
+              <span>4K OLED &amp; QLED TVs</span>
+              <span style="font-size:0.9rem; color:var(--accent-teal);">➔</span>
+            </h3>
+            <p class="cat-showcase-desc">Cinema-grade 55"–65" displays with self-lit pixels, Dolby Vision IQ, and Atmos
+              surround audio.</p>
+            <div class="cat-showcase-footer">
+              <span class="cat-showcase-price">From $1,299</span>
+              <span class="cat-showcase-cta">Explore Models ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 5: Built-In Ovens & Microwaves -->
+        <a href="products.html?cat=ovens" class="cat-showcase-card">
+          <div class="cat-showcase-thumb">
+            <span class="cat-showcase-badge">16 Models</span>
+            <img src="assets/Vortex Built-In Pyrolytic Wall Oven 71L.jpg" alt="Built-In Ovens &amp; Microwaves"
+              class="cat-showcase-img" loading="lazy">
+          </div>
+          <div class="cat-showcase-body">
+            <h3 class="cat-showcase-title">
+              <span>Ovens &amp; Microwaves</span>
+              <span style="font-size:0.9rem; color:var(--accent-teal);">➔</span>
+            </h3>
+            <p class="cat-showcase-desc">Pyrolytic self-cleaning wall ovens, steam convection baking, and smart counter
+              microwave units.</p>
+            <div class="cat-showcase-footer">
+              <span class="cat-showcase-price">From $349</span>
+              <span class="cat-showcase-cta">Explore Models ➔</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 6: Dishwashers -->
+        <a href="products.html?cat=dishwashers" class="cat-showcase-card">
+          <div class="cat-showcase-thumb">
+            <span class="cat-showcase-badge">14 Models</span>
+            <img src="assets/Vortex Ultra-Quiet Built-In Dishwasher 14 Place.jpg" alt="Built-In Dishwashers"
+              class="cat-showcase-img" loading="lazy">
+          </div>
+          <div class="cat-showcase-body">
+            <h3 class="cat-showcase-title">
+              <span>Built-In Dishwashers</span>
+              <span style="font-size:0.9rem; color:var(--accent-teal);">➔</span>
+            </h3>
+            <p class="cat-showcase-desc">Whisper-quiet 38dB operation, auto-dosing systems, TrueSteam sanitization, and
+              zeolith drying.</p>
+            <div class="cat-showcase-footer">
+              <span class="cat-showcase-price">From $999</span>
+              <span class="cat-showcase-cta">Explore Models ➔</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Limited-Time Offers & Appliance Protection Bundles -->
+  <section class="deals-banner-strip">
+    <div class="container">
+      <div class="deals-strip-grid">
+        <div>
+          <span class="deals-tag-badge">Exclusive Showroom Sale</span>
+          <h2 class="deals-heading">Save Up to 30% on Major Appliances + 0% Financing</h2>
+          <p class="deals-desc">Upgrade your home with official factory warranties, guaranteed lowest pricing, and
+            certified installation on select premium models.</p>
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="products.html" class="btn btn-primary">Shop Sale Appliances ➔</a>
+            <a href="services.html#booking" class="btn btn-secondary">Claim Trade-In Rebate</a>
+          </div>
+        </div>
+        <div class="deals-perks-grid">
+          <div class="deals-perk-card">
+            <span class="deals-perk-title">Free In-Home Installation</span>
+            <span class="deals-perk-sub">Certified technicians hook up plumbing, gas, and power lines safely.</span>
+          </div>
+          <div class="deals-perk-card">
+            <span class="deals-perk-title">Up to $300 Trade-In Credit</span>
+            <span class="deals-perk-sub">We haul away your old working or broken appliance and credit your
+              purchase.</span>
+          </div>
+          <div class="deals-perk-card">
+            <span class="deals-perk-title">0% APR Financing Available</span>
+            <span class="deals-perk-sub">Spread appliance costs over 6, 12, or 24 months with no extra interest.</span>
+          </div>
+          <div class="deals-perk-card">
+            <span class="deals-perk-title">10-Year Extended Warranty</span>
+            <span class="deals-perk-sub">Guaranteed manufacturer coverage with priority 24/7 service dispatch.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="products-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Flagship Appliance Store</span>
+        <h2 class="heading-lg section-title">Best-Selling Home Appliances</h2>
+        <p class="section-desc">Hand-picked top-rated appliances backed by full manufacturer warranty, complimentary
+          installation, and our master service guarantee.</p>
+      </div>
+
+      <div class="products-filter-bar">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-category="all">All Appliances</button>
+          <button class="filter-pill" data-category="refrigerators">Refrigerators</button>
+          <button class="filter-pill" data-category="washing-machines">Washing Machines</button>
+          <button class="filter-pill" data-category="air-conditioners">Air Conditioners</button>
+          <button class="filter-pill" data-category="tvs">Smart TVs</button>
+          <button class="filter-pill" data-category="ovens">Built-In Ovens</button>
+          <button class="filter-pill" data-category="dishwashers">Dishwashers</button>
+        </div>
+        <a href="products.html" class="btn btn-sm btn-secondary">View Full Store Catalog →</a>
+      </div>
+
+      <div class="product-grid product-grid-4col" id="featured-products-grid">
+        <!-- Rendered by js/app.js -->
+      </div>
+
+      <!-- View More Button -->
+      <div style="text-align:center; margin-top:2.5rem;">
+        <button id="featured-view-more-btn" class="btn btn-secondary" style="min-width:200px; gap:0.5rem;">
+          View More Appliances <span style="font-size:1.1rem;">↓</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Popular Brands Showcase & Comparison -->
+  <section class="brands-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Authorized Sales & Service Partners</span>
+        <h2 class="heading-lg section-title">Top World-Class Appliance Brands</h2>
+        <p class="section-desc">We stock, service, and supply genuine OEM parts for leading global appliance
+          manufacturers.</p>
+      </div>
+
+      <div class="brands-logo-grid">
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">SAMSUNG</strong>
+        </div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">LG</strong></div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">BOSCH</strong></div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">WHIRLPOOL</strong>
+        </div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">SONY</strong></div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">MIELE</strong></div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">PANASONIC</strong>
+        </div>
+        <div class="brand-logo-card"><strong style="font-size:1.3rem; color:var(--text-secondary);">KITCHENAID</strong>
+        </div>
+      </div>
+
+      <!-- Brand Comparison Matrix Preview -->
+      <div class="comparison-matrix-wrapper">
+        <div class="comparison-header">
+          <h3 class="heading-md" style="margin-top:0;">Brand Technology Comparison</h3>
+          <span class="badge badge-teal">Verified Specs Matrix</span>
+        </div>
+        <div style="overflow-x:auto; -webkit-overflow-scrolling:touch; width:100%;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Brand</th>
+                <th>Compressor / Motor Tech</th>
+                <th>Energy Star Index</th>
+                <th>Standard Warranty</th>
+                <th>VORTEX Service Network</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Samsung</strong></td>
+                <td>Digital Inverter Twin Cooling</td>
+                <td>5 Star (Inverter)</td>
+                <td>10 Years Compressor</td>
+                <td><span style="color:var(--accent-teal); font-weight:700;">Express 24h Visit</span></td>
+              </tr>
+              <tr>
+                <td><strong>LG</strong></td>
+                <td>Inverter Direct Drive & AI DD</td>
+                <td>5 Star (Eco)</td>
+                <td>10 Years Motor</td>
+                <td><span style="color:var(--accent-teal); font-weight:700;">Express 24h Visit</span></td>
+              </tr>
+              <tr>
+                <td><strong>Bosch</strong></td>
+                <td>EcoSilence Drive Motor</td>
+                <td>A+++ Super Eco</td>
+                <td>5 Years Full OEM</td>
+                <td><span style="color:var(--accent-teal); font-weight:700;">Authorized OEM Parts</span></td>
+              </tr>
+              <tr>
+                <td><strong>Miele</strong></td>
+                <td>ProfiEco High-Precision Motor</td>
+                <td>A+++ Peak Efficiency</td>
+                <td>5 Years Comprehensive</td>
+                <td><span style="color:var(--accent-teal); font-weight:700;">Certified Master Techs</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service & Repair Advantages -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Master Service Center &amp; Repairs</span>
+        <h2 class="heading-lg section-title">Certified Appliance Repair &amp; Diagnostics</h2>
+        <p class="section-desc">Fast, transparent, and reliable in-home diagnostic and repair solutions for all major
+          household appliances by OEM-certified master technicians.</p>
+      </div>
+
+      <!-- Interactive 4-Step Repair Booking Station -->
+      <div class="repair-station-wrapper">
+        <div class="repair-station-header">
+          <div>
+            <span class="badge badge-teal" style="margin-bottom:0.4rem;">Live Service Dispatch</span>
+            <h3 class="repair-station-title">Instant Appliance Repair Estimator</h3>
+            <p class="repair-station-sub">Select your broken appliance and symptoms for transparent upfront diagnostic
+              pricing.</p>
+          </div>
+          <div class="repair-station-fee-pill">
+            <span style="font-size:0.85rem; color:var(--text-muted);">Standard Diagnostic Fee:</span>
+            <strong>$79 (100% Credited Toward Repair)</strong>
+          </div>
+        </div>
+
+        <form onsubmit="event.preventDefault(); window.location.href='services.html#booking';">
+          <div class="repair-station-steps-grid">
+
+            <!-- Step 1 -->
+            <div class="repair-step-box">
+              <span class="repair-step-label">Step 1</span>
+              <h4 class="repair-step-title">Select Appliance</h4>
+              <select class="form-select" id="repair-select-appliance" required>
+                <option value="refrigerator">Refrigerator / Freezer</option>
+                <option value="washer">Washing Machine / Dryer</option>
+                <option value="ac">Air Conditioner / Split Unit</option>
+                <option value="tv">Smart 4K / OLED TV</option>
+                <option value="oven">Built-In Oven / Microwave</option>
+                <option value="dishwasher">Built-In Dishwasher</option>
+              </select>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="repair-step-box">
+              <span class="repair-step-label">Step 2</span>
+              <h4 class="repair-step-title">Select Brand</h4>
+              <select class="form-select" id="repair-select-brand" required>
+                <option value="samsung">Samsung</option>
+                <option value="lg">LG</option>
+                <option value="bosch">Bosch</option>
+                <option value="whirlpool">Whirlpool</option>
+                <option value="sony">Sony</option>
+                <option value="panasonic">Panasonic</option>
+                <option value="miele">Miele</option>
+                <option value="other">Other Brand</option>
+              </select>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="repair-step-box">
+              <span class="repair-step-label">Step 3</span>
+              <h4 class="repair-step-title">Primary Symptom</h4>
+              <select class="form-select" id="repair-select-issue" required>
+                <option value="cooling">Not cooling / freezing</option>
+                <option value="noise">Unusual noise / loud vibration</option>
+                <option value="leak">Water leaking / drainage issue</option>
+                <option value="power">No power / PCB control error</option>
+                <option value="gas">AC gas refilling / warm air</option>
+                <option value="door">Door latch / seal broken</option>
+              </select>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="repair-step-box"
+              style="background: rgba(196,162,96,0.06); border-color: rgba(196,162,96,0.35); justify-content:center;">
+              <span class="repair-step-label">Step 4 • Dispatch</span>
+              <div style="font-size:0.8rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+                Estimated Dispatch: <strong>Today within 2 Hours</strong>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                Book Technician ➔
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+      <!-- Specialized In-Home Service Cards Grid -->
+      <div class="services-grid" style="margin-top:3rem;">
+
+        <!-- Service 1: Refrigerators -->
+        <div class="service-card">
+          <div class="service-card-img-wrap">
+            <img src="assets/refrigerator_repair.jpg" alt="Refrigerator &amp; Freezer Repair" class="service-card-img"
+              loading="lazy">
+            <div class="service-card-badge-overlay">
+              <span class="badge badge-teal">Same-Day Diagnostic</span>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <h3>Refrigerator &amp; Freezer Repair</h3>
+            <p>Digital inverter compressor replacement, refrigerant leak detection, PCB board repairs, and ice maker
+              calibration.</p>
+            <ul class="service-features-list">
+              <li>✓ Same-day emergency food-saver visit</li>
+              <li>✓ 100% Genuine factory OEM compressors</li>
+              <li>✓ 90-day parts &amp; labor service warranty</li>
+            </ul>
+            <a href="services.html#booking" class="btn btn-sm btn-outline-teal">Book Refrigerator Repair</a>
+          </div>
+        </div>
+
+        <!-- Service 2: Washers & Dryers -->
+        <div class="service-card">
+          <div class="service-card-img-wrap">
+            <img src="assets/washer_repair.jpg" alt="Washing Machine &amp; Dryer Repair" class="service-card-img"
+              loading="lazy">
+            <div class="service-card-badge-overlay">
+              <span class="badge badge-gold">Certified Techs</span>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <h3>Washing Machine &amp; Dryer Repair</h3>
+            <p>Drum noise troubleshooting, water pump and drainage pump replacement, spin failure fix, and door seal
+              renewal.</p>
+            <ul class="service-features-list">
+              <li>✓ Direct Drive motor diagnostic</li>
+              <li>✓ PCB circuit board repair &amp; programming</li>
+              <li>✓ Transparent upfront estimates</li>
+            </ul>
+            <a href="services.html#booking" class="btn btn-sm btn-outline-teal">Book Washer Repair</a>
+          </div>
+        </div>
+
+        <!-- Service 3: Air Conditioners -->
+        <div class="service-card">
+          <div class="service-card-img-wrap">
+            <img src="assets/ac_repair.jpg" alt="Air Conditioner Service &amp; Gas Refill" class="service-card-img"
+              loading="lazy">
+            <div class="service-card-badge-overlay">
+              <span class="badge badge-teal">Express Refill</span>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <h3>Air Conditioner Service &amp; Gas Refill</h3>
+            <p>Deep anti-bacterial foam chemical washing, R32/R410 refrigerant gas refilling, compressor tuning, and
+              leak sealing.</p>
+            <ul class="service-features-list">
+              <li>✓ Nitrogen pressure leak testing</li>
+              <li>✓ Inverter PCB troubleshooting</li>
+              <li>✓ Annual Maintenance Contracts (AMC)</li>
+            </ul>
+            <a href="services.html#booking" class="btn btn-sm btn-outline-teal">Book AC Servicing</a>
+          </div>
+        </div>
+
+        <!-- Service 4: Smart TVs, Ovens & Dishwashers -->
+        <div class="service-card">
+          <div class="service-card-img-wrap">
+            <img src="assets/vortex_oled_tv.jpg" alt="Smart TV &amp; Built-In Appliance Repair" class="service-card-img"
+              loading="lazy">
+            <div class="service-card-badge-overlay">
+              <span class="badge badge-gold">Master Tech</span>
+            </div>
+          </div>
+          <div class="service-card-body">
+            <h3>Smart TV &amp; Kitchen Appliance Repair</h3>
+            <p>OLED/QLED screen circuit repair, built-in oven thermostat/heating element replacement, and dishwasher
+              water circulation fixes.</p>
+            <ul class="service-features-list">
+              <li>✓ Power supply &amp; motherboard testing</li>
+              <li>✓ Oven convection fan &amp; heater replacements</li>
+              <li>✓ Factory-certified calibration</li>
+            </ul>
+            <a href="services.html#booking" class="btn btn-sm btn-outline-teal">Book Appliance Repair</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Service Workflow Timeline -->
+      <div style="text-align:center; margin-top:2rem;">
+        <span class="section-subtitle">Simple 5-Step Process</span>
+        <h3 class="heading-md" style="margin-top:0.5rem;">How Our Repair Service Works</h3>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h4>Online Booking</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">Fill quick form with preferred date
+            & slot.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h4>Tech Dispatch</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">Master technician assigned within 2
+            hours.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h4>Diagnostic Quote</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">On-site inspection with upfront
+            pricing.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h4>Expert Repair</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">Repaired using original factory
+            parts.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <h4>90-Day Guarantee</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">Full peace-of-mind service coverage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ REDESIGNED: Warranty — Full-Width Split Panel ═══ -->
+  <section class="warranty-section">
+    <div class="container">
+      <div class="warranty-split-grid">
+
+        <!-- Left: editorial header + stats -->
+        <div class="warranty-left">
+          <span class="section-subtitle" style="margin-bottom:1.25rem;">Peace of Mind Guaranteed</span>
+          <h2 class="heading-lg warranty-headline">Industry&#8209;Leading<br><span
+              style="color:var(--accent-teal);">Warranty Coverage</span></h2>
+          <p class="warranty-lead">Every appliance sold comes with full manufacturer warranty plus our in-house VORTEX
+            service guarantee — zero compromise, zero hidden costs.</p>
+
+          <div class="warranty-stats-row">
+            <div class="warranty-stat">
+              <span class="warranty-stat-num">10<span class="warranty-stat-unit">yr</span></span>
+              <span class="warranty-stat-label">Compressor Cover</span>
+            </div>
+            <div class="warranty-stat-divider"></div>
+            <div class="warranty-stat">
+              <span class="warranty-stat-num">90<span class="warranty-stat-unit">d</span></span>
+              <span class="warranty-stat-label">Repair Guarantee</span>
+            </div>
+            <div class="warranty-stat-divider"></div>
+            <div class="warranty-stat">
+              <span class="warranty-stat-num">24<span class="warranty-stat-unit">/7</span></span>
+              <span class="warranty-stat-label">Priority Dispatch</span>
+            </div>
+          </div>
+
+          <a href="services.html" class="btn btn-primary" style="margin-top:0.5rem; width:fit-content;">View All
+            Guarantees →</a>
+        </div>
+
+        <!-- Right: 2×2 feature tiles -->
+        <div class="warranty-tiles-grid">
+          <div class="warranty-tile">
+            <h4 class="warranty-tile-title">10-Year Compressor</h4>
+            <p class="warranty-tile-desc">Samsung &amp; LG inverter refrigerator and AC compressors covered for 10 full
+              years — factory authorized.</p>
+            <div class="warranty-tile-bar"></div>
+          </div>
+          <div class="warranty-tile warranty-tile--gold">
+            <h4 class="warranty-tile-title">90-Day Repair Guarantee</h4>
+            <p class="warranty-tile-desc">All appliance repairs backed by 90 days of parts and labor coverage — zero
+              hidden costs.</p>
+            <div class="warranty-tile-bar"></div>
+          </div>
+          <div class="warranty-tile warranty-tile--gold">
+            <h4 class="warranty-tile-title">Full AMC Plans</h4>
+            <p class="warranty-tile-desc">Annual Maintenance Contracts with unlimited technician visits and preventative
+              tune-ups.</p>
+            <div class="warranty-tile-bar"></div>
+          </div>
+          <div class="warranty-tile">
+            <h4 class="warranty-tile-title">Express Priority Service</h4>
+            <p class="warranty-tile-desc">Warranty customers receive same-day priority dispatch with 2-hour maximum
+              response time.</p>
+            <div class="warranty-tile-bar"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REDESIGNED: Why VORTEX — Immersive Feature Grid ═══ -->
+  <section class="why-vortex-section" style="padding:6rem 0; position:relative; overflow:hidden;">
+
+    <!-- Ambient glows -->
+    <div
+      style="position:absolute; top:-100px; right:-150px; width:600px; height:600px; background:radial-gradient(circle, rgba(196,162,96,0.06) 0%, transparent 65%); pointer-events:none; border-radius:50%;">
+    </div>
+    <div
+      style="position:absolute; bottom:-100px; left:-150px; width:500px; height:500px; background:radial-gradient(circle, rgba(196,162,96,0.04) 0%, transparent 65%); pointer-events:none; border-radius:50%;">
+    </div>
+
+    <div class="container" style="position:relative;">
+      <div class="section-header" style="margin-bottom:3.5rem;">
+        <span class="section-subtitle">Why Choose VORTEX</span>
+        <h2 class="heading-lg section-title">The Complete Appliance Store <span style="color:var(--accent-teal);">&
+            Service Center</span></h2>
+        <p class="section-desc">We combine premium retail product selection with certified installation, preventative
+          care, and lifetime repair support.</p>
+      </div>
+
+      <div class="why-feature-bento">
+
+        <!-- Hero Wide Card — Master Tech -->
+        <div class="why-hero-feature-card">
+          <div class="why-hero-content">
+            <div style="display:flex; gap:0.5rem; margin-bottom:1.1rem; flex-wrap:wrap;">
+              <span class="why-unique-tag">FEATURED PARTNER</span>
+              <span class="badge badge-gold">10-YEAR GUARANTEE</span>
+            </div>
+            <h3 class="why-hero-title">Certified Brand Specialists &amp; OEM Master Techs</h3>
+            <p class="why-hero-desc">Factory-trained technicians certified directly by Samsung, LG, Bosch, Whirlpool,
+              and Miele. We diagnose complex PCB boards, compressor failures, and digital refrigeration systems with
+              surgical accuracy.</p>
+            <div class="why-hero-certs">
+              <span>✓ Samsung Certified</span>
+              <span>✓ LG Direct Drive</span>
+              <span>✓ Bosch Master</span>
+            </div>
+          </div>
+          <div class="why-hero-visual">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
+              alt="OEM Master Technician" class="why-hero-img" loading="lazy">
+            <div class="why-hero-seal">
+              <span>100% Factory Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Card: Price Match -->
+        <div class="why-feat-card">
+          <div class="why-feat-icon-row">
+            <span class="why-unique-tag">BEST PRICE GUARANTEE</span>
+          </div>
+          <h3 class="why-unique-title">Transparent Price Matching</h3>
+          <p class="why-unique-desc">We match any verified competitor price on identical models instantly — no haggling
+            or hidden fees.</p>
+          <div class="why-feat-footer">
+            <span>Verified Lowest Price</span>
+            <span class="why-feat-value">100% Match</span>
+          </div>
+        </div>
+
+        <!-- Feature Card: White-Glove Delivery -->
+        <div class="why-feat-card">
+          <div class="why-feat-icon-row">
+            <span class="why-unique-tag">EXPRESS 24H</span>
+          </div>
+          <h3 class="why-unique-title">White-Glove Express Delivery</h3>
+          <p class="why-unique-desc">Scheduled delivery windows with unboxing, installation, and old appliance haul-away
+            included.</p>
+          <div class="why-feat-steps">
+            <span>Dispatch</span>
+            <span class="why-feat-arrow">→</span>
+            <span>Install</span>
+            <span class="why-feat-arrow">→</span>
+            <span class="why-feat-done">Done ✓</span>
+          </div>
+        </div>
+
+        <!-- Feature Card: 24/7 Emergency -->
+        <div class="why-feat-card why-feat-card--accent">
+          <div class="why-feat-icon-row">
+            <span class="live-pulse-badge"><span class="pulse-dot"></span> 24/7 DISPATCH</span>
+          </div>
+          <h3 class="why-unique-title">24/7 Emergency Repair Line</h3>
+          <p class="why-unique-desc">On-call certified technicians dispatched round-the-clock for urgent fridge or AC
+            breakdowns.</p>
+          <a href="services.html#booking" class="btn btn-sm btn-outline-teal"
+            style="width:100%; text-align:center; margin-top:auto;">Call Repair Hotline →</a>
+        </div>
+
+        <!-- Feature Card: Genuine Parts -->
+        <div class="why-feat-card">
+          <div class="why-feat-icon-row">
+            <span class="why-unique-tag">GENUINE OEM</span>
+          </div>
+          <h3 class="why-unique-title">100% Genuine Spare Parts</h3>
+          <p class="why-unique-desc">We strictly use manufacturer-authorized spare parts with a 90-day warranty — zero
+            cheap substitutes.</p>
+          <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:auto;">
+            <span class="badge badge-teal">Factory Serial Stamp</span>
+            <span class="badge badge-gold">90-Day Wty</span>
+          </div>
+        </div>
+
+        <!-- Feature Card: Eco Disposal -->
+        <div class="why-feat-card">
+          <div class="why-feat-icon-row">
+            <span class="why-unique-tag">ECO-FRIENDLY</span>
+          </div>
+          <h3 class="why-unique-title">Eco-Responsible Disposal</h3>
+          <p class="why-unique-desc">Old appliances recycled per environmental safety guidelines — protecting our
+            planet.</p>
+          <div class="why-feat-footer" style="margin-top:auto;">
+            <span>Zero Landfill Commitment</span>
+            <span class="why-feat-value" style="color:#10b981;">100% Safe</span>
+          </div>
+        </div>
+
+        <!-- Feature Card: Trade-In & Upgrade -->
+        <div class="why-feat-card">
+          <div class="why-feat-icon-row">
+            <span class="why-unique-tag">TRADE-IN &amp; UPGRADE</span>
+          </div>
+          <h3 class="why-unique-title">Instant Trade-In Credit</h3>
+          <p class="why-unique-desc">Trade in any old working or broken appliance and receive up to $300 credit toward
+            new flagship models.</p>
+          <div class="why-feat-footer" style="margin-top:auto;">
+            <span>Instant Appliance Credit</span>
+            <span class="why-feat-value" style="color:var(--accent-teal);">Up to $300</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REDESIGNED: Testimonials — Horizontal Scrolling Cards ═══ -->
+  <section class="testimonials-section"
+    style="border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+    <div class="container">
+      <div class="testi-header-row"
+        style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:3rem; gap:2rem; flex-wrap:wrap;">
+        <div>
+          <span class="section-subtitle" style="margin-bottom:0.75rem;">Customer Wall of Trust</span>
+          <h2 class="heading-lg section-title" style="margin-top:0.5rem; text-align:left; margin-bottom:0;">What Our
+            <span style="color:var(--accent-teal);">Clients Say</span>
+          </h2>
+        </div>
+        <div class="testi-meta-block">
+          <div class="testi-aggregate">
+            <span class="testi-big-star">★</span>
+            <div>
+              <div class="testi-rating-num">4.97</div>
+              <div class="testi-rating-label">Average Rating</div>
+            </div>
+          </div>
+          <div class="testi-aggregate">
+            <span class="testi-big-icon">💬</span>
+            <div>
+              <div class="testi-rating-num">2,840+</div>
+              <div class="testi-rating-label">Verified Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-scroll-track">
+
+        <!-- Card 1 -->
+        <div class="testi-scroll-card">
+          <div class="testi-card-top">
+            <div class="testi-stars">★★★★★</div>
+            <span class="testi-category-pill">Emergency Repair</span>
+          </div>
+          <p class="testi-body">"Our Samsung French-door fridge stopped cooling right before a dinner party. The VORTEX
+            master tech arrived in 85 minutes, replaced the sensor with a genuine part, and saved all our food!"</p>
+          <div class="testi-author-row">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
+              alt="Robert Davis" class="testi-avatar-sm">
+            <div>
+              <div class="testi-author-name">Robert Davis</div>
+              <div class="testi-author-sub">Homeowner • Verified Purchase</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testi-scroll-card testi-scroll-card--photo">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80"
+            alt="Sibyl Vane" class="testi-photo-bg">
+          <div class="testi-photo-overlay">
+            <div class="testi-stars" style="font-size:0.8rem;">★★★★★</div>
+            <p class="testi-body" style="font-size:0.85rem; margin-bottom:0.75rem;">"Outstanding 24/7 hotline. Fixed our
+              ice maker on Sunday within 2 hours."</p>
+            <div class="testi-author-name" style="color:var(--accent-teal-light);">Sibyl Vane @sibyl_vane</div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testi-scroll-card">
+          <div class="testi-card-top">
+            <div class="testi-stars">★★★★★</div>
+            <span class="testi-category-pill">Price Match</span>
+          </div>
+          <h4 style="font-size:1rem; font-weight:800; color:var(--text-primary); margin-bottom:0.5rem;">"Transparent
+            Price Matching!"</h4>
+          <p class="testi-body">We matched a competitor price on our Bosch washer and saved over $350. Honest service
+            and zero hidden fees!</p>
+          <div class="testi-author-row">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
+              alt="Basil Hallward" class="testi-avatar-sm">
+            <div>
+              <div class="testi-author-name">Basil Hallward</div>
+              <span class="badge badge-teal">★ 4.9 Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testi-scroll-card testi-scroll-card--highlight">
+          <div class="testi-card-top">
+            <h4 style="font-size:1rem; font-weight:800; color:var(--accent-teal-light); margin:0;">Good Job! ✦</h4>
+            <span class="testi-score">★ 5.0</span>
+          </div>
+          <p class="testi-body">Genuine OEM parts used for our oven repair with 90-day guarantee. Can't recommend VORTEX
+            enough!</p>
+          <span class="badge badge-gold" style="width:fit-content;">@emma_appliance</span>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="testi-scroll-card">
+          <div class="testi-bookmark-flag">★ TOP REVIEW</div>
+          <h4 style="font-size:1.05rem; font-weight:800; margin-bottom:0.5rem; color:var(--text-primary);">Exceptional
+            Showroom Experience</h4>
+          <p class="testi-body">They helped us compare LG and Miele side-by-side in the showroom. Delivery was punctual
+            and old appliances were recycled responsibly!</p>
+          <div class="testi-footer-row">
+            <div class="testi-stars">★★★★★</div>
+            <div class="testi-avatar-cluster">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80"
+                alt="a1">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80"
+                alt="a2">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80"
+                alt="a3">
+              <span class="testi-avatar-more">+128</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="testi-scroll-card">
+          <div
+            style="font-size:2.5rem; color:var(--accent-teal); line-height:1; font-family:serif; margin-bottom:0.5rem;">
+            "</div>
+          <p class="testi-body">The annual maintenance contract for our multi-split ACs is worth every penny. Ice-cold
+            cooling all summer long with zero noise.</p>
+          <div class="testi-author-row">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&q=80"
+              alt="Michael Brown" class="testi-avatar-sm">
+            <div>
+              <div class="testi-author-name">Michael Brown</div>
+              <div class="testi-author-sub">AMC Client</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REDESIGNED: Blog — Editorial Three-Up ═══ -->
+  <section class="blog-section" style="padding:5.5rem 0;">
+    <div class="container">
+      <div class="blog-header-row"
+        style="display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:3rem; gap:1.5rem; flex-wrap:wrap;">
+        <div>
+          <span class="section-subtitle" style="margin-bottom:0.75rem;">Knowledge Hub</span>
+          <h2 class="heading-lg section-title" style="margin-top:0.5rem; text-align:left; margin-bottom:0;">Appliance
+            Care <span style="color:var(--accent-teal);">Guides &amp; Advice</span></h2>
+        </div>
+        <a href="blog.html" class="btn btn-secondary" style="white-space:nowrap;">View All Articles →</a>
+      </div>
+
+      <div class="blog-editorial-grid">
+
+        <!-- Featured Wide Card -->
+        <article class="blog-editorial-featured">
+          <div class="blog-feat-img-wrap">
+            <a href="blog-details.html?id=1">
+              <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=80"
+                alt="Refrigerator Buying Guide" loading="lazy" class="blog-feat-img">
+            </a>
+            <div class="blog-feat-overlay">
+              <span class="badge badge-teal">Buying Guides</span>
+            </div>
+          </div>
+          <div class="blog-feat-body">
+            <div class="blog-feat-meta">
+              <span>Aug 10, 2026</span>
+              <span class="blog-feat-dot">·</span>
+              <span>5 min read</span>
+            </div>
+            <h3 class="blog-feat-title"><a href="blog-details.html?id=1"
+                style="color:inherit; text-decoration:none;">How to Choose the Right Refrigerator Capacity for Your
+                Family</a></h3>
+            <p class="blog-feat-excerpt">Understanding liter capacities, French-door vs side-by-side configurations, and
+              choosing between twin or single cooling systems.</p>
+            <a href="blog-details.html?id=1" class="btn btn-sm btn-outline-teal">Read Article →</a>
+          </div>
+        </article>
+
+        <!-- Two stacked side cards -->
+        <div class="blog-editorial-stack">
+
+          <article class="blog-stack-card">
+            <div class="blog-stack-img-wrap">
+              <a href="blog-details.html?id=2">
+                <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80"
+                  alt="Washing Machine Maintenance" loading="lazy" class="blog-stack-img">
+              </a>
+            </div>
+            <div class="blog-stack-body">
+              <div class="blog-stack-meta">
+                <span class="badge badge-beige">Maintenance</span>
+                <span>Aug 4, 2026</span>
+              </div>
+              <h3 class="blog-stack-title"><a href="blog-details.html?id=2"
+                  style="color:inherit; text-decoration:none;">10 Maintenance Tips to Double Your Washing Machine's
+                  Lifespan</a></h3>
+              <a href="blog-details.html?id=2" class="blog-read-link">Read Article →</a>
+            </div>
+          </article>
+
+          <article class="blog-stack-card">
+            <div class="blog-stack-img-wrap">
+              <a href="blog-details.html?id=3">
+                <img src="images/technician_service.png" alt="Repair vs Replace" loading="lazy" class="blog-stack-img">
+              </a>
+            </div>
+            <div class="blog-stack-body">
+              <div class="blog-stack-meta">
+                <span class="badge badge-gold">Repair vs Replace</span>
+                <span>Jul 28, 2026</span>
+              </div>
+              <h3 class="blog-stack-title"><a href="blog-details.html?id=3"
+                  style="color:inherit; text-decoration:none;">When Is It Time to Upgrade Your Appliances? The 50%
+                  Rule</a></h3>
+              <a href="blog-details.html?id=3" class="blog-read-link">Read Article →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ REDESIGNED: Final CTA — Bold Cinematic Banner ═══ -->
+  <section class="cta-final-section">
+    <div class="cta-final-glow"></div>
+    <div class="container cta-final-inner">
+      <div class="cta-final-text">
+        <span class="section-subtitle" style="margin-bottom:1.25rem;">Your Complete Appliance Destination</span>
+        <h2 class="cta-final-headline">Upgrade Your Kitchen or<br>Repair an Appliance Today</h2>
+        <p class="cta-final-desc">Speak directly with our appliance store specialists or schedule a fast certified
+          technician
+          visit to your doorstep.</p>
+      </div>
+      <div class="cta-final-actions">
+        <a href="products.html" class="btn btn-lg btn-primary cta-btn-main">Shop Appliance Catalog</a>
+        <a href="services.html#booking" class="btn btn-lg btn-beige">Schedule In-Home Repair</a>
+        <div class="cta-trust-line">
+          <span>✓ Free Installation</span>
+          <span>✓ 10-Year Warranty</span>
+          <span>✓ 24/7 Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+
+    <!-- VIP Newsletter -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-inner">
+
+        <!-- Left: Editorial Content -->
+        <div class="newsletter-left">
+          <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+          <h2 class="newsletter-headline">Stay Ahead with<br><span>Expert Appliance Insights</span></h2>
+          <p class="newsletter-subtext">Join 18,000+ homeowners who get exclusive deals, pro maintenance tips, and
+            priority repair dispatch — all in one weekly email.</p>
+
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <span><strong>$50 OFF</strong> your first appliance order, instantly</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Monthly pro tips from OEM-certified master techs</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Priority diagnostic dispatch alerts before public queue</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Warranty renewal reminders and AMC plan offers</span>
+            </div>
+          </div>
+
+          <div class="newsletter-social-proof">
+            <div class="newsletter-avatars">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80"
+                alt="Member">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80"
+                alt="Member">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=formsat&fit=crop&w=80&q=80"
+                alt="Member">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80"
+                alt="Member">
+            </div>
+            <div class="newsletter-proof-text">
+              <strong>18,240+ VIP Members</strong><br>
+              ★★★★★ Loved by homeowners across the region
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form Card -->
+        <div class="newsletter-right">
+          <div class="newsletter-offer-badge">
+            <div class="newsletter-offer-text">
+              <strong>Exclusive Welcome Offer — $50 OFF</strong>
+              <span>Applied automatically on your first order after signup</span>
+            </div>
+          </div>
+
+          <form
+            onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5rem 0;\'><div style=\'font-size:2rem; margin-bottom:0.75rem;\'>✅</div><div style=\'font-weight:800; color:var(--accent-teal); font-size:1.05rem;\'>You\'re in! Welcome to the VIP Club.</div><p style=\'color:var(--text-muted); font-size:0.88rem; margin-top:0.5rem;\'>Check your inbox for your $50 coupon code.</p></div>';">
+            <label class="newsletter-form-label">Your email address</label>
+            <div class="newsletter-field">
+              <input type="email" class="newsletter-email-input" placeholder="yourname@email.com" required
+                autocomplete="email">
+            </div>
+            <button type="submit" class="newsletter-submit">Join Free — Get $50 OFF →</button>
+          </form>
+
+          <div class="newsletter-privacy">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            No spam, ever. Unsubscribe anytime. Your data is never sold.
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ═══ END NEWSLETTER ═══ -->
+
+
+
+    <!-- Layer 2: 4 Service Guarantees -->
+    <div class="footer-guarantee-bar">
+      <div class="container">
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🚚</div>
+            <div class="guarantee-text">
+              <strong>Free Express Shipping</strong>
+              <span>On all appliance orders over $499</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🛡️</div>
+            <div class="guarantee-text">
+              <strong>10-Year Inverter Protection</strong>
+              <span>Factory authorized zero-deductible warranty</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🔧</div>
+            <div class="guarantee-text">
+              <strong>Certified OEM Hookup</strong>
+              <span>Master technician installation included</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">📞</div>
+            <div class="guarantee-text">
+              <strong>24/7 Service Hotline</strong>
+              <span>Direct master technician emergency dispatch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3: Main 5-Column Navigation -->
+    <div class="footer-main-section">
+      <div class="container">
+        <div class="footer-5col-grid">
+
+          <!-- Col 1: Brand & Bio -->
+          <div>
+            <a href="index.html" class="brand-logo">
+              <div class="logo-icon">V</div>
+              <div class="logo-text">
+                VORTEX<span>.</span>
+                <span class="logo-tagline">Appliance Store & Service Center</span>
+              </div>
+            </a>
+            <p class="footer-brand-p">
+              Premier home appliance showroom & factory-authorized master service center. Certified sales, professional
+              installation, and 24/7
+              repair care since 2010.
+            </p>
+            <div class="footer-contact-pills">
+              <div class="contact-pill-item"><strong>+1 (800) 555-VORTEX</strong></div>
+              <div class="contact-pill-item">support@vortex.com</div>
+            </div>
+            <div class="social-links-row">
+              <a href="https://facebook.com/vortexappliances" target="_blank" rel="noopener noreferrer"
+                class="social-icon-btn" title="Facebook">FB</a>
+              <a href="https://instagram.com/vortexappliances" target="_blank" rel="noopener noreferrer"
+                class="social-icon-btn" title="Instagram">IG</a>
+              <a href="https://youtube.com/@vortexappliances" target="_blank" rel="noopener noreferrer"
+                class="social-icon-btn" title="YouTube">YT</a>
+              <a href="https://linkedin.com/company/vortex-appliances" target="_blank" rel="noopener noreferrer"
+                class="social-icon-btn" title="LinkedIn">LN</a>
+              <a href="https://x.com/vortexcare" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+                title="Twitter / X">X</a>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links (Matches Navbar Exactly) -->
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Showroom Categories -->
+          <div>
+            <h4 class="footer-col-title">Store Catalog</h4>
+            <ul class="footer-nav-list">
+              <li><a href="products.html?category=Refrigerators">Flagship Refrigerators</a></li>
+              <li><a href="products.html?category=Washing%20Machines">Smart Washers &amp; Dryers</a></li>
+              <li><a href="products.html?category=Air%20Conditioners">Inverter Air Conditioners</a></li>
+              <li><a href="products.html?category=Built-In%20Ovens">Built-In Pyrolytic Ovens</a></li>
+              <li><a href="products.html?category=Dishwashers">Quiet Dishwashers</a></li>
+              <li><a href="products.html?category=Vacuum%20Cleaners">Cordless Stick Vacuums</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Master Repair Services -->
+          <div>
+            <h4 class="footer-col-title">Master Service Center</h4>
+            <ul class="footer-nav-list">
+              <li><a href="services.html#booking">Compressor &amp; Motor Repair</a></li>
+              <li><a href="services.html#booking">AC Chemical Wash &amp; Service</a></li>
+              <li><a href="services.html#booking">Washer Drum Calibration</a></li>
+              <li><a href="services.html#booking">Same-Day Emergency Dispatch</a></li>
+              <li><a href="services.html#booking">100% Factory OEM Parts</a></li>
+              <li><a href="services.html#booking">Annual Care Maintenance</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Showroom Hours & Location -->
+          <div>
+            <h4 class="footer-col-title">Store &amp; Service Hours</h4>
+            <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.5;">
+              <strong>Flagship Store:</strong> 742 Evergreen Terrace, Tech District, NY 10001
+            </p>
+            <div class="footer-hours-box">
+              <div class="hours-row">
+                <span>Mon – Sat:</span>
+                <strong style="color:var(--text-primary);">8:00 AM – 9:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Sunday:</span>
+                <strong style="color:var(--text-primary);">10:00 AM – 6:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Emergency:</span>
+                <strong style="color:var(--accent-teal);">24/7/365 Open</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 4: Bottom Security Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container bottom-bar-inner">
+        <div>© 2026 VORTEX Home Appliances &amp; Care Inc. All Rights Reserved.</div>
+        <div class="legal-links-row">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms of Service</a>
+          <span>•</span>
+          <a href="warranty.html">OEM Warranty</a>
+          <span>•</span>
+          <a href="sitemap.html">Site Map</a>
+        </div>
+        <div class="payment-badges-row">
+          <span class="payment-chip">VISA</span>
+          <span class="payment-chip">MasterCard</span>
+          <span class="payment-chip">AMEX</span>
+          <span class="payment-chip">Apple Pay</span>
+          <span class="payment-chip">ISO-9001</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top-btn" title="Scroll to top">↑</button>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

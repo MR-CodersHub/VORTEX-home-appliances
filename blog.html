@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appliance Store & Service Guides, Maintenance & Buying Advice - VORTEX</title>
+  <meta name="description" content="Read expert appliance buying guides, maintenance tips, energy-saving advice, and technician repair guides from VORTEX Store & Service Center specialists.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <div class="top-bar-item">
+          <span>📞 Store & Service Center Hotline: <strong>+1 (800) 555-VORTEX</strong></span>
+        </div>
+        <div class="top-bar-item">
+          <span>💡 Expert Advice from Showroom Specialists & Master Technicians</span>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <span>Updated Weekly with Modern Appliance Tips</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX<span>.</span>
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-theme-controls" style="display:flex; align-items:center; gap:0.4rem;">
+          <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+          <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+        </div>
+        <a href="cart.html" class="header-cart-btn" id="header-cart-btn" title="View Shopping Cart">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="header-cart-count">0</span>
+        </a>
+        <a href="services.html#booking" class="btn btn-sm btn-primary header-cta">Book a Service</a>
+        <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobile-drawer">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">V</div>
+        <div class="logo-text">
+          VORTEX
+          <span class="logo-tagline">Appliance Store & Service Center</span>
+        </div>
+      </a>
+      <button class="btn-icon" id="mobile-close-btn">✕</button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="home2.html" class="mobile-nav-link">Home 2 (Alt View)</a>
+      <a href="about.html" class="mobile-nav-link">About Store & Service Center</a>
+      <a href="products.html" class="mobile-nav-link">Products & Showroom</a>
+      <a href="services.html" class="mobile-nav-link">Services & Repair Booking</a>
+      <a href="blog.html" class="mobile-nav-link active">Appliance Blog & Guides</a>
+      <a href="contact.html" class="mobile-nav-link">Contact Store & Service Hub</a>
+    </div>
+    <div class="mobile-drawer-cta-wrap">
+      <a href="services.html#booking" class="mobile-drawer-booking-btn">
+        <span>Book a Repair</span>
+        <span>🛠️</span>
+      </a>
+    </div>
+    <div class="mobile-drawer-utility">
+      <button class="mobile-util-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme"></button>
+      <button class="mobile-util-btn dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction"></button>
+    </div>
+  </aside>
+
+  <!-- Redesigned Modern Blog & Knowledge Hero -->
+  <section class="page-hero-section">
+    <div class="container page-hero-grid">
+      <div>
+        <div class="page-hero-breadcrumbs">
+          <a href="index.html">Home</a> <span>/</span> <span class="current">Appliance Knowledge &amp; Blog</span>
+        </div>
+        <div class="page-hero-badge-group">
+          <span class="hero-status-pill"><span class="status-live-pulse"></span> Certified Master Technician Editorial</span>
+          <span class="badge badge-gold">⭐ 100% Practical Guides</span>
+        </div>
+        <h1 class="page-hero-title">
+          Appliance Store Insights &amp; <span class="text-teal">Master Repair Guides</span>
+        </h1>
+        <p class="page-hero-desc">
+          Authored by our factory-certified engineers and showroom specialists. Master energy efficiency tricks, preventative maintenance schedules, and smart appliance buying advice.
+        </p>
+        <div class="page-hero-actions">
+          <a href="#featured-articles" class="btn btn-lg btn-primary" style="gap:0.5rem;">
+            <span>Browse Latest Guides</span>
+            <span>➔</span>
+          </a>
+          <a href="services.html#booking" class="btn btn-lg btn-secondary" style="gap:0.5rem;">
+            <span>Ask a Master Tech</span>
+            <span>💡</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Featured Editorial Hub Card -->
+      <div class="page-hero-card">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+          <div>
+            <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--accent-teal-light); font-weight:800;">Featured Editorial</span>
+            <h3 style="font-size:1.15rem; color:var(--text-primary); margin:0.2rem 0 0 0;">Technician Recommendation</h3>
+          </div>
+          <span class="badge badge-teal" style="font-size:0.72rem;">5 Min Read</span>
+        </div>
+
+        <a href="blog-details.html?id=guide-01" style="display:block; text-decoration:none; background:rgba(255,255,255,0.03); border:1px solid rgba(196,162,96,0.25); border-radius:12px; padding:1rem; margin-bottom:1.25rem; transition:border-color 0.3s ease;">
+          <span style="font-size:0.74rem; font-weight:700; color:var(--accent-teal); text-transform:uppercase;">Energy Efficiency Hack</span>
+          <h4 style="font-size:0.96rem; color:#ffffff; margin:0.35rem 0 0.4rem; line-height:1.35;">5 Inverter AC Maintenance Secrets That Cut Power Bills by 40%</h4>
+          <p style="font-size:0.78rem; color:var(--text-muted); margin:0;">By Sarah Lin (Lead HVAC Specialist) • Certified R32 EPA</p>
+        </a>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; font-size:0.8rem; color:var(--text-secondary); padding-top:0.75rem; border-top:1px solid var(--border-subtle);">
+          <span>📚 12 Master Repair Guides</span>
+          <a href="#featured-articles" style="color:var(--accent-teal-light); font-weight:700; text-decoration:none;">View All Guides ➔</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Category Filter Toolbar -->
+  <section style="padding:2.5rem 0 1rem 0;">
+    <div class="container" style="display:flex; justify-content:center;">
+      <div class="filter-pills">
+        <button class="filter-pill blog-filter-pill active" data-category="all">All Articles</button>
+        <button class="filter-pill blog-filter-pill" data-category="buying-guides">Buying Guides</button>
+        <button class="filter-pill blog-filter-pill" data-category="maintenance">Maintenance</button>
+        <button class="filter-pill blog-filter-pill" data-category="energy">Energy Saving</button>
+        <button class="filter-pill blog-filter-pill" data-category="repair-vs-replace">Repair vs Replace</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Articles Grid -->
+  <section style="padding:1.5rem 0 2rem 0;">
+    <div class="container">
+      <div class="blog-grid">
+        
+        <article class="blog-card" data-category="buying-guides">
+          <div class="blog-thumb">
+            <a href="blog-details.html?id=1">
+              <img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=600&q=80" alt="Refrigerator Buying Guide">
+            </a>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="badge badge-teal">Buying Guides</span>
+              <span>Aug 10, 2026</span>
+              <span>• 5 Min Read</span>
+            </div>
+            <h3 class="blog-title"><a href="blog-details.html?id=1" style="color:inherit; text-decoration:none;">How to Choose the Right Refrigerator Capacity for Your Family</a></h3>
+            <p class="blog-excerpt">
+              Understanding liter capacities, French-door vs side-by-side configurations, and twin cooling tech to match your household size.
+            </p>
+            <a href="blog-details.html?id=1" class="btn btn-sm btn-outline-teal">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="maintenance">
+          <div class="blog-thumb">
+            <a href="blog-details.html?id=2">
+              <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=600&q=80" alt="Washing Machine Maintenance">
+            </a>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="badge badge-beige">Maintenance</span>
+              <span>Aug 04, 2026</span>
+              <span>• 4 Min Read</span>
+            </div>
+            <h3 class="blog-title"><a href="blog-details.html?id=2" style="color:inherit; text-decoration:none;">10 Maintenance Tips to Double Your Washing Machine’s Lifespan</a></h3>
+            <p class="blog-excerpt">
+              Prevent drum odor, clean inlet filters, inspect rubber gaskets, and avoid overload strain on Direct Drive inverter motors.
+            </p>
+            <a href="blog-details.html?id=2" class="btn btn-sm btn-outline-teal">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="repair-vs-replace">
+          <div class="blog-thumb">
+            <a href="blog-details.html?id=3">
+              <img src="images/technician_service.png" alt="Repair vs Replace Decision">
+            </a>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="badge badge-gold">Repair vs Replace</span>
+              <span>Jul 28, 2026</span>
+              <span>• 6 Min Read</span>
+            </div>
+            <h3 class="blog-title"><a href="blog-details.html?id=3" style="color:inherit; text-decoration:none;">Repair vs. Replace: When Is It Time to Upgrade Your Appliances?</a></h3>
+            <p class="blog-excerpt">
+              Use the 50% rule: evaluating repair costs against appliance age, energy inefficiency, and modern inverter savings.
+            </p>
+            <a href="blog-details.html?id=3" class="btn btn-sm btn-outline-teal">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="energy">
+          <div class="blog-thumb">
+            <a href="blog-details.html?id=4">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=90" alt="AC Energy Saving Tips">
+            </a>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="badge badge-teal">Energy Saving</span>
+              <span>Jul 20, 2026</span>
+              <span>• 4 Min Read</span>
+            </div>
+            <h3 class="blog-title"><a href="blog-details.html?id=4" style="color:inherit; text-decoration:none;">5 Hacks to Cut Air Conditioner Electricity Consumption by 40%</a></h3>
+            <p class="blog-excerpt">
+              Optimal thermostat settings, inverter compressor tuning, PM2.5 filter cleaning, and thermal insulation tricks.
+            </p>
+            <a href="blog-details.html?id=4" class="btn btn-sm btn-outline-teal">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="maintenance">
+          <div class="blog-thumb">
+            <a href="blog-details.html?id=5">
+              <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=600&q=80" alt="Microwave Care">
+            </a>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="badge badge-beige">Maintenance</span>
+              <span>Jul 12, 2026</span>
+              <span>• 3 Min Read</span>
+            </div>
+            <h3 class="blog-title"><a href="blog-details.html?id=5" style="color:inherit; text-decoration:none;">Microwave Safety & Magnetron Maintenance Guide</a></h3>
+            <p class="blog-excerpt">
+              How to avoid sparking, clean ceramic interiors safely, and spot early signs of magnetron tube degradation.
+            </p>
+            <a href="blog-details.html?id=5" class="btn btn-sm btn-outline-teal">Read Full Article →</a>
+          </div>
+        </article>
+
+        <article class="blog-card" data-category="buying-guides">
+          <div class="blog-thumb">
+            <a href="blog-details.html?id=6">
+              <img src="https://images.unsplash.com/photo-1581622558663-b2e33377dfb2?auto=format&fit=crop&w=600&q=90" alt="Dishwasher Buying Guide">
+            </a>
+          </div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="badge badge-teal">Buying Guides</span>
+              <span>Jul 05, 2026</span>
+              <span>• 5 Min Read</span>
+            </div>
+            <h3 class="blog-title"><a href="blog-details.html?id=6" style="color:inherit; text-decoration:none;">Why Built-In Dishwashers Save More Water Than Hand Washing</a></h3>
+            <p class="blog-excerpt">
+              Comparing water consumption metrics: 10L vs 50L per load, eco sanitization temperature cycles, and quiet decibel ratings.
+            </p>
+            <a href="blog-details.html?id=6" class="btn btn-sm btn-outline-teal">Read Full Article →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================================================
+       ULTRA-PROFESSIONAL SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    
+        
+    <!-- ═══ REDESIGNED NEWSLETTER ═══ -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container newsletter-inner">
+
+        <!-- Left: Editorial Content -->
+        <div class="newsletter-left">
+          <span class="newsletter-eyebrow">✉ VIP Care Club</span>
+          <h2 class="newsletter-headline">Stay Ahead with<br><span>Expert Appliance Insights</span></h2>
+          <p class="newsletter-subtext">Join 18,000+ homeowners who get exclusive deals, pro maintenance tips, and priority repair dispatch — all in one weekly email.</p>
+
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <span><strong>$50 OFF</strong> your first appliance order, instantly</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Monthly pro tips from OEM-certified master techs</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Priority diagnostic dispatch alerts before public queue</span>
+            </div>
+            <div class="newsletter-perk">
+              <span>Warranty renewal reminders and AMC plan offers</span>
+            </div>
+          </div>
+
+          <div class="newsletter-social-proof">
+            <div class="newsletter-avatars">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="Member">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Member">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Member">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=80&q=80" alt="Member">
+            </div>
+            <div class="newsletter-proof-text">
+              <strong>18,240+ VIP Members</strong><br>
+              ★★★★★ Loved by homeowners across the region
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Form Card -->
+        <div class="newsletter-right">
+          <div class="newsletter-offer-badge">
+            <div class="newsletter-offer-text">
+              <strong>Exclusive Welcome Offer — $50 OFF</strong>
+              <span>Applied automatically on your first order after signup</span>
+            </div>
+          </div>
+
+          <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\'text-align:center; padding:1.5rem 0;\'><div style=\'font-size:2rem; margin-bottom:0.75rem;\'>✅</div><div style=\'font-weight:800; color:var(--accent-teal); font-size:1.05rem;\'>You\'re in! Welcome to the VIP Club.</div><p style=\'color:var(--text-muted); font-size:0.88rem; margin-top:0.5rem;\'>Check your inbox for your $50 coupon code.</p></div>';">
+            <label class="newsletter-form-label">Your email address</label>
+            <div class="newsletter-field">
+              <input type="email" class="newsletter-email-input" placeholder="yourname@email.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="newsletter-submit">Join Free — Get $50 OFF →</button>
+          </form>
+
+          <div class="newsletter-privacy">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            No spam, ever. Unsubscribe anytime. Your data is never sold.
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+    <!-- Layer 2: 4 Service Guarantees -->
+    <div class="footer-guarantee-bar">
+      <div class="container">
+        <div class="guarantee-grid">
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🚚</div>
+            <div class="guarantee-text">
+              <strong>Free Express Shipping</strong>
+              <span>On all appliance orders over $499</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🛡️</div>
+            <div class="guarantee-text">
+              <strong>10-Year Inverter Protection</strong>
+              <span>Factory authorized zero-deductible warranty</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">🔧</div>
+            <div class="guarantee-text">
+              <strong>Certified OEM Hookup</strong>
+              <span>Master technician installation included</span>
+            </div>
+          </div>
+          <div class="guarantee-card">
+            <div class="guarantee-icon-box">📞</div>
+            <div class="guarantee-text">
+              <strong>24/7 Service Hotline</strong>
+              <span>Direct master technician emergency dispatch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 3: Main 5-Column Navigation -->
+    <div class="footer-main-section">
+      <div class="container">
+        <div class="footer-5col-grid">
+          
+          <!-- Col 1: Brand & Bio -->
+          <div>
+            <a href="index.html" class="brand-logo">
+              <div class="logo-icon">V</div>
+              <div class="logo-text">
+                VORTEX<span>.</span>
+                <span class="logo-tagline">Appliance Store & Service Center</span>
+              </div>
+            </a>
+            <p class="footer-brand-p">
+              Premier home appliance showroom & factory-authorized master service center. Certified sales, professional installation, and 24/7 service since 2010.
+            </p>
+            <div class="footer-contact-pills">
+              <div class="contact-pill-item"><strong>+1 (800) 555-VORTEX</strong></div>
+              <div class="contact-pill-item">support@vortex.com</div>
+            </div>
+            <div class="social-links-row">
+              <a href="https://facebook.com/vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Facebook">FB</a>
+              <a href="https://instagram.com/vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Instagram">IG</a>
+              <a href="https://youtube.com/@vortexappliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="YouTube">YT</a>
+              <a href="https://linkedin.com/company/vortex-appliances" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">LN</a>
+              <a href="https://x.com/vortexcare" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="Twitter / X">X</a>
+            </div>
+          </div>
+
+          <!-- Col 2: Navigation Links (Matches Navbar Exactly) -->
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="home2.html">Home 2</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Showroom Categories -->
+          <div>
+            <h4 class="footer-col-title">Store Catalog</h4>
+            <ul class="footer-nav-list">
+              <li><a href="products.html?category=Refrigerators">Flagship Refrigerators</a></li>
+              <li><a href="products.html?category=Washing%20Machines">Smart Washers &amp; Dryers</a></li>
+              <li><a href="products.html?category=Air%20Conditioners">Inverter Air Conditioners</a></li>
+              <li><a href="products.html?category=Built-In%20Ovens">Built-In Pyrolytic Ovens</a></li>
+              <li><a href="products.html?category=Dishwashers">Quiet Dishwashers</a></li>
+              <li><a href="products.html?category=Vacuum%20Cleaners">Cordless Stick Vacuums</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Master Repair Services -->
+          <div>
+            <h4 class="footer-col-title">Master Service Center</h4>
+            <ul class="footer-nav-list">
+              <li><a href="services.html#booking">Compressor &amp; Motor Repair</a></li>
+              <li><a href="services.html#booking">AC Chemical Wash &amp; Service</a></li>
+              <li><a href="services.html#booking">Washer Drum Calibration</a></li>
+              <li><a href="services.html#booking">Same-Day Emergency Dispatch</a></li>
+              <li><a href="services.html#booking">100% Factory OEM Parts</a></li>
+              <li><a href="services.html#booking">Annual Care Maintenance</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5: Showroom Hours & Location -->
+          <div>
+            <h4 class="footer-col-title">Store &amp; Service Hours</h4>
+            <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.5;">
+              <strong>Flagship Store:</strong> 742 Evergreen Terrace, Tech District, NY 10001
+            </p>
+            <div class="footer-hours-box">
+              <div class="hours-row">
+                <span>Mon – Sat:</span>
+                <strong style="color:var(--text-primary);">8:00 AM – 9:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Sunday:</span>
+                <strong style="color:var(--text-primary);">10:00 AM – 6:00 PM</strong>
+              </div>
+              <div class="hours-row">
+                <span>Emergency:</span>
+                <strong style="color:var(--accent-teal);">24/7/365 Open</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Layer 4: Bottom Security Bar -->
+    <div class="footer-bottom-bar">
+      <div class="container bottom-bar-inner">
+        <div>© 2026 VORTEX Home Appliances &amp; Care Inc. All Rights Reserved.</div>
+        <div class="legal-links-row">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html">Terms of Service</a>
+          <span>•</span>
+          <a href="warranty.html">OEM Warranty</a>
+          <span>•</span>
+          <a href="sitemap.html">Site Map</a>
+        </div>
+        <div class="payment-badges-row">
+          <span class="payment-chip">VISA</span>
+          <span class="payment-chip">MasterCard</span>
+          <span class="payment-chip">AMEX</span>
+          <span class="payment-chip">Apple Pay</span>
+          <span class="payment-chip">ISO-9001</span>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+  <button class="back-to-top" id="back-to-top-btn" title="Scroll to top">↑</button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
