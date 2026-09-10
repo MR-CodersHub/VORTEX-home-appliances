@@ -460,11 +460,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateCounters() {
-    const wishlistCountEl = document.getElementById('wishlist-counter');
+    const wishlistCountEls = document.querySelectorAll('.wishlist-counter, #wishlist-counter, #header-wishlist-count, #drawer-wishlist-count');
     const compareCountEl = document.getElementById('compare-counter');
-    const cartCountEls = document.querySelectorAll('.cart-counter, #cart-counter, #header-cart-count');
+    const cartCountEls = document.querySelectorAll('.cart-counter, #cart-counter, #header-cart-count, #drawer-cart-count');
 
-    if (wishlistCountEl) wishlistCountEl.textContent = AppState.wishlist.length;
+    wishlistCountEls.forEach(el => { el.textContent = AppState.wishlist.length; });
     if (compareCountEl) compareCountEl.textContent = AppState.compare.length;
     
     const totalCartItems = AppState.cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
@@ -516,6 +516,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileToggleBtn.addEventListener('click', openMobileNav);
     if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileNav);
     mobileBackdrop.addEventListener('click', closeMobileNav);
+
+    window.openMobileNav = openMobileNav;
+    window.closeMobileNav = closeMobileNav;
   }
 
   // --- Cart Drawer Log  // --- Showroom & Service Consultation Enquiry Modal ---
@@ -533,19 +536,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = 'hidden';
 
     modal.innerHTML = `
-      <div style="background:var(--bg-card); border:1px solid var(--border-medium); border-radius:var(--radius-lg); width:92%; max-width:600px; max-height:88vh; overflow-y:auto; margin:4vh auto; padding:2rem; position:relative; box-shadow:var(--shadow-lg);">
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem; border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+      <div class="modal-dialog-box">
+        <div class="modal-dialog-header">
           <div>
             <span class="badge badge-teal" style="margin-bottom:0.4rem;">Showroom & Service Consultation</span>
             <h3 class="heading-md" style="margin:0;">Enquire About Appliance</h3>
           </div>
-          <button class="btn-icon" onclick="document.getElementById('enquiry-modal').className='drawer-backdrop'; document.body.style.overflow='';">✕</button>
+          <button class="btn-icon" onclick="document.getElementById('enquiry-modal').className='drawer-backdrop'; document.body.style.overflow='';" aria-label="Close modal">✕</button>
         </div>
         ${product ? `
-          <div style="display:flex; gap:1rem; align-items:center; background:var(--bg-tertiary); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:0.85rem; margin-bottom:1.5rem;">
-            <img src="${product.image}" alt="${product.name}" style="width:60px; height:60px; object-fit:contain; border-radius:6px; background:var(--bg-card);">
-            <div>
-              <strong style="font-size:0.95rem; display:block; color:var(--text-primary);">${product.name}</strong>
+          <div class="modal-product-preview">
+            <img src="${product.image}" alt="${product.name}" class="modal-product-img">
+            <div style="min-width:0; flex-grow:1;">
+              <strong style="font-size:0.95rem; display:block; color:var(--text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${product.name}</strong>
               <span style="font-size:0.82rem; color:var(--accent-teal); font-weight:700;">$${product.price} • ${product.brand}</span>
               <div style="font-size:0.75rem; color:var(--text-muted); margin-top:2px;">🛡️ ${product.warranty}</div>
             </div>
@@ -554,21 +557,21 @@ document.addEventListener('DOMContentLoaded', () => {
         <form onsubmit="event.preventDefault(); this.innerHTML='<div style=\\'text-align:center; padding:2rem 0;\\'><div style=\\'font-size:2.5rem; margin-bottom:0.75rem;\\'>✅</div><h3 style=\\'color:var(--accent-teal); margin-bottom:0.5rem;\\'>Enquiry Received!</h3><p style=\\'color:var(--text-secondary); font-size:0.9rem;\\'>Our appliance consultant will contact you within 2 business hours with pricing, availability, and installation options.</p><button class=\\'btn btn-sm btn-secondary\\' style=\\'margin-top:1.5rem;\\' onclick=\\'document.getElementById(\\'enquiry-modal\\').className=\\'drawer-backdrop\\'; document.body.style.overflow=\\'\\';\\'>Close</button></div>';">
           <div class="form-group" style="margin-bottom:1rem;">
             <label class="form-label" style="font-size:0.85rem;">Your Name *</label>
-            <input type="text" class="form-control" required placeholder="e.g. John Doe">
+            <input type="text" class="form-control" required placeholder="e.g. John Doe" style="width:100%; box-sizing:border-box;">
           </div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+          <div class="modal-two-col">
             <div class="form-group">
               <label class="form-label" style="font-size:0.85rem;">Phone Number *</label>
-              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000">
+              <input type="tel" class="form-control" required placeholder="+1 (555) 000-0000" style="width:100%; box-sizing:border-box;">
             </div>
             <div class="form-group">
               <label class="form-label" style="font-size:0.85rem;">Email Address *</label>
-              <input type="email" class="form-control" required placeholder="john@example.com">
+              <input type="email" class="form-control" required placeholder="john@example.com" style="width:100%; box-sizing:border-box;">
             </div>
           </div>
           <div class="form-group" style="margin-bottom:1.25rem;">
             <label class="form-label" style="font-size:0.85rem;">Request Type</label>
-            <select class="form-select">
+            <select class="form-select" style="width:100%; box-sizing:border-box;">
               <option>Price Quote & Showroom Availability</option>
               <option>Home Delivery & Certified Installation</option>
               <option>In-Store Demo & Consultation Appointment</option>
@@ -578,15 +581,22 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div class="form-group" style="margin-bottom:1.5rem;">
             <label class="form-label" style="font-size:0.85rem;">Additional Notes or Questions</label>
-            <textarea class="form-control" rows="3" placeholder="Tell us about your kitchen dimensions, installation requirements, etc."></textarea>
+            <textarea class="form-control" rows="3" placeholder="Tell us about your kitchen dimensions, installation requirements, etc." style="width:100%; box-sizing:border-box;"></textarea>
           </div>
-          <div style="display:flex; gap:0.75rem;">
-            <button type="submit" class="btn btn-primary" style="flex:1; justify-content:center;">Submit Showroom Enquiry →</button>
-            <a href="services.html#booking" class="btn btn-secondary">Book Service Instead</a>
+          <div class="modal-btn-row">
+            <button type="submit" class="btn btn-primary" style="flex:1;">Submit Showroom Enquiry →</button>
+            <a href="services.html#booking" class="btn btn-secondary" onclick="document.getElementById('enquiry-modal').className='drawer-backdrop'; document.body.style.overflow='';">Book Service Instead</a>
           </div>
         </form>
       </div>
     `;
+
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        modal.className = 'drawer-backdrop';
+        document.body.style.overflow = '';
+      }
+    };
   };
 
   // --- Wishlist Global Handler ---
@@ -602,6 +612,78 @@ document.addEventListener('DOMContentLoaded', () => {
       showToast('Added to Saved Appliances');
     }
     updateCounters();
+    // If on cart page and renderSavedWishlist exists, refresh it
+    if (typeof window.renderSavedWishlist === 'function') {
+      window.renderSavedWishlist();
+    }
+  };
+
+  // --- Show Saved Appliances (Wishlist) Modal ---
+  window.openWishlistModal = function() {
+    let modal = document.getElementById('wishlist-modal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'wishlist-modal';
+      modal.className = 'drawer-backdrop active';
+      document.body.appendChild(modal);
+    } else {
+      modal.className = 'drawer-backdrop active';
+    }
+    document.body.style.overflow = 'hidden';
+
+    const saved = AppState.wishlist.map(id => AppState.products.find(p => p.id === id)).filter(Boolean);
+
+    modal.innerHTML = `
+      <div class="wishlist-modal-dialog">
+        <div class="modal-dialog-header">
+          <div>
+            <span class="badge badge-teal" style="margin-bottom:0.4rem;">Favorites &amp; Shortlist</span>
+            <h3 class="heading-md" style="margin:0; display:flex; align-items:center; gap:0.5rem;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="#ef4444" stroke="#ef4444" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span>Saved / Liked Appliances (${saved.length})</span>
+            </h3>
+          </div>
+          <button class="btn-icon" onclick="document.getElementById('wishlist-modal').className='drawer-backdrop'; document.body.style.overflow='';" style="font-size:1.25rem;">✕</button>
+        </div>
+
+        ${saved.length === 0 ? `
+          <div style="text-align:center; padding:3rem 1rem;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--text-muted)" stroke-width="1.5" style="margin:0 auto 1rem; display:block;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <h4 style="color:var(--text-primary); margin-bottom:0.5rem; font-size:1.1rem;">No saved appliances yet</h4>
+            <p style="color:var(--text-secondary); font-size:0.9rem; margin-bottom:1.5rem;">Tap the heart icon on any appliance in our catalog to save it here for later.</p>
+            <a href="products.html" class="btn btn-primary" onclick="document.getElementById('wishlist-modal').className='drawer-backdrop'; document.body.style.overflow='';">Browse Appliances</a>
+          </div>
+        ` : `
+          <div style="display:flex; flex-direction:column; gap:1rem; margin-bottom:1.5rem;">
+            ${saved.map(p => `
+              <div class="wishlist-item-card" style="display:flex; align-items:center; gap:1rem; padding:1rem; background:var(--bg-tertiary); border:1px solid var(--border-subtle); border-radius:var(--radius-md); box-sizing:border-box;">
+                <img src="${p.image}" alt="${p.name}" style="width:72px; height:72px; object-fit:contain; border-radius:var(--radius-sm); background:var(--bg-secondary); padding:4px; flex-shrink:0;">
+                <div style="flex-grow:1; min-width:0;">
+                  <div style="font-size:0.75rem; font-weight:700; color:var(--accent-teal); text-transform:uppercase;">${p.brand}</div>
+                  <h4 style="font-size:0.95rem; font-weight:700; color:var(--text-primary); margin:0.2rem 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${p.name}</h4>
+                  <div style="font-size:1rem; font-weight:800; color:var(--accent-teal);">$${p.price.toLocaleString()}</div>
+                </div>
+                <div class="wishlist-item-actions" style="display:flex; flex-direction:column; gap:0.4rem; flex-shrink:0;">
+                  <button class="btn btn-sm btn-primary" onclick="addToCart('${p.id}'); showToast('Added to Cart!');" style="font-size:0.8rem; padding:0.45rem 0.8rem;">Add to Cart</button>
+                  <button class="btn btn-sm btn-secondary" onclick="toggleWishlist('${p.id}'); openWishlistModal();" style="font-size:0.75rem; padding:0.35rem 0.6rem; color:#ef4444; border-color:rgba(239,68,68,0.3);">Remove</button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <div class="wishlist-footer-row" style="display:flex; justify-content:space-between; align-items:center; padding-top:1rem; border-top:1px solid var(--border-subtle); gap:0.75rem;">
+            <a href="cart.html" class="btn btn-secondary" style="font-size:0.88rem; justify-content:center;">View Full Cart</a>
+            <button class="btn btn-primary" style="justify-content:center;" onclick="document.getElementById('wishlist-modal').className='drawer-backdrop'; document.body.style.overflow='';">Continue Shopping</button>
+          </div>
+        `}
+      </div>
+    `;
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.className = 'drawer-backdrop';
+        document.body.style.overflow = '';
+      }
+    });
   };
 
   // --- Compare System Handler ---
@@ -671,8 +753,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     modal.innerHTML = `
-      <div style="background:var(--bg-secondary); border:1px solid var(--border-medium); border-radius:var(--radius-lg); width:90%; max-width:1000px; max-height:85vh; overflow-y:auto; margin:4vh auto; padding:2rem; position:relative;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; border-bottom:1px solid var(--border-subtle); padding-bottom:1rem;">
+      <div class="modal-dialog-box" style="max-width:1000px;">
+        <div class="modal-dialog-header">
           <h2 class="heading-md">Appliance & Brand Comparison</h2>
           <button class="btn-icon" onclick="document.getElementById('compare-modal').className='drawer-backdrop'">✕</button>
         </div>
@@ -725,8 +807,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="product-card">
         <div class="product-thumb">
           ${p.oldPrice ? `<span class="badge badge-sale product-sale-tag">Save $${p.oldPrice - p.price}</span>` : ''}
-          <button class="product-wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="toggleWishlist('${p.id}', this)" title="Save Appliance">
-            ♥
+          <button class="product-wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="toggleWishlist('${p.id}', this)" title="${isWishlisted ? 'Saved in Liked Appliances' : 'Save Appliance'}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
           </button>
           <a href="product-details.html?id=${p.id}" class="product-thumb-link">
             <img src="${p.image}" alt="${p.name}" loading="lazy" class="product-img-contain">

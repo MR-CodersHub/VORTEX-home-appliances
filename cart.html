@@ -17,113 +17,143 @@
    CART PAGE SPECIFIC STYLES — HIGH CONTRAST IN DARK & LIGHT MODES
    ============================================================== */
 
-/* --- Hero Section --- */
-.cart-page-hero {
+/* ==============================================================
+   CLEAN & SLEEK CART HEADER (COMPACT, HIGH CONTRAST)
+   ============================================================== */
+.cart-clean-header {
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-medium);
-  padding: 2.75rem 0 2.25rem;
-  transition: background var(--transition-normal);
+  padding: 0.95rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: background var(--transition-normal), border-color var(--transition-normal);
 }
-.cart-page-hero h1 {
-  font-size: clamp(2rem, 3.2vw, 2.6rem);
-  font-family: var(--font-heading);
-  font-weight: 800;
-  color: var(--text-primary);
-  margin: 0 0 0.4rem;
-  letter-spacing: -0.02em;
-}
-.cart-page-hero p {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  margin: 0;
-  max-width: 600px;
-}
-.cart-breadcrumb {
+.cart-clean-header-inner {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.85rem;
-  font-weight: 500;
+  justify-content: space-between;
+  gap: 1.25rem;
 }
-.cart-breadcrumb a {
-  color: var(--accent-teal);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-fast);
-}
-.cart-breadcrumb a:hover {
-  color: var(--accent-teal-light);
-  text-decoration: underline;
-}
-.cart-breadcrumb span.crumb-sep {
-  color: var(--text-muted);
-  font-size: 0.75rem;
-}
-.cart-breadcrumb span.crumb-current {
-  color: var(--text-primary);
-  font-weight: 600;
-}
-
-/* --- Progress Steps --- */
-.cart-progress {
+.cart-clean-left {
   display: flex;
   align-items: center;
-  gap: 0;
-  margin-top: 1.75rem;
+  gap: 0.9rem;
   flex-wrap: wrap;
 }
-.cart-progress-step {
-  display: flex;
+.cart-back-btn {
+  display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.45rem;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-secondary);
-  transition: color var(--transition-fast);
-}
-.cart-progress-step.active {
-  color: var(--accent-teal);
-  font-weight: 700;
-}
-.cart-progress-step .step-num {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 800;
-  background: var(--bg-tertiary);
-  border: 2px solid var(--border-accent);
-  color: var(--text-secondary);
-  flex-shrink: 0;
+  text-decoration: none;
+  padding: 0.42rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
   transition: all var(--transition-fast);
 }
-.cart-progress-step.active .step-num {
-  background: var(--accent-teal);
+.cart-back-btn:hover {
+  color: var(--accent-teal);
   border-color: var(--accent-teal);
-  color: #06080a;
-  font-weight: 800;
-  box-shadow: 0 0 14px var(--accent-teal-glow);
+  background: rgba(196, 162, 96, 0.08);
 }
-.cart-progress-line {
-  flex: 1;
-  height: 2px;
+.cart-back-label-mob {
+  display: none;
+}
+.cart-back-label-desk {
+  display: inline;
+}
+html[dir="rtl"] .cart-back-btn svg {
+  transform: rotate(180deg);
+}
+.cart-clean-divider {
+  width: 1px;
+  height: 22px;
   background: var(--border-medium);
-  margin: 0 0.85rem;
-  max-width: 70px;
+}
+.cart-clean-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.cart-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(196, 162, 96, 0.12);
+  color: var(--accent-teal);
+  border: 1px solid rgba(196, 162, 96, 0.3);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.cart-clean-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  padding: 0.25rem 0.35rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-sm);
+}
+.cart-clean-actions .btn-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.cart-clean-actions .btn-icon:hover {
+  background: rgba(196, 162, 96, 0.18);
+  color: var(--accent-teal);
+}
+html[data-theme="light"] .cart-clean-header {
+  background: rgba(247, 243, 237, 0.95);
+  border-bottom-color: #c8bfb0;
+}
+html[data-theme="light"] .cart-back-btn {
+  background: #ffffff;
+  border-color: #c8bfb0;
+  color: #3d3025;
+}
+html[data-theme="light"] .cart-back-btn:hover {
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
+  background: #ede6dc;
+}
+html[data-theme="light"] .cart-clean-divider {
+  background: #c8bfb0;
+}
+html[data-theme="light"] .cart-clean-actions {
+  background: #ffffff;
+  border-color: #c8bfb0;
+}
+html[data-theme="light"] .cart-clean-actions .btn-icon {
+  color: #140f0a;
+}
+html[data-theme="light"] .cart-clean-actions .btn-icon:hover {
+  background: #ede6dc;
+  color: var(--accent-teal);
 }
 
 /* --- Main Layout --- */
 .cart-layout {
   display: grid;
   grid-template-columns: 1fr 380px;
-  gap: 2.25rem;
+  gap: 2rem;
   align-items: start;
-  padding: 3rem 0 5rem;
+  padding: 1.75rem 0 3.5rem;
 }
 @media (max-width: 960px) {
   .cart-layout {
@@ -294,36 +324,95 @@
   border-left: 1px solid var(--border-medium);
   border-right: 1px solid var(--border-medium);
 }
-.cart-remove-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ef4444;
+.cart-remove-btn,
+.cart-like-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
   font-size: 0.8rem;
   font-weight: 600;
-  padding: 0;
-  transition: opacity var(--transition-fast);
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  opacity: 0.85;
+  cursor: pointer;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
 }
 .cart-remove-btn:hover {
-  opacity: 1;
-  text-decoration: underline;
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #ef4444;
+}
+.cart-like-btn:hover,
+.cart-like-btn.active {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.45);
+  color: #ef4444;
+}
+.cart-like-btn.active svg {
+  fill: #ef4444;
+  color: #ef4444;
+}
+html[data-theme="light"] .cart-remove-btn,
+html[data-theme="light"] .cart-like-btn {
+  background: #f7f3ed;
+  border-color: #c8bfb0;
+  color: #3d3025;
+}
+html[data-theme="light"] .cart-remove-btn:hover,
+html[data-theme="light"] .cart-like-btn:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #dc2626;
+}
+
+/* --- Saved / Liked Appliances Section in Cart --- */
+.cart-wishlist-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1.5px dashed var(--border-medium);
+}
+.cart-wishlist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.cart-wishlist-header h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+.cart-wishlist-header h2 svg {
+  color: #ef4444;
+  fill: #ef4444;
 }
 
 /* --- Empty Cart State --- */
 .cart-empty {
   text-align: center;
-  padding: 4.5rem 2rem;
+  padding: 3.5rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .cart-empty-icon {
-  width: 72px;
-  height: 72px;
+  width: 64px !important;
+  height: 64px !important;
+  max-width: 64px !important;
+  max-height: 64px !important;
   margin: 0 auto 1.25rem;
   color: var(--accent-teal);
-  opacity: 0.8;
+  opacity: 0.9;
+  display: block;
 }
 .cart-empty h3 {
   font-size: 1.35rem;
@@ -335,12 +424,14 @@
 .cart-empty p {
   color: var(--text-secondary);
   font-size: 0.95rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.65rem;
+  max-width: 440px;
+  line-height: 1.5;
 }
 
 /* --- Order Summary Body --- */
 .cart-summary-body {
-  padding: 1.6rem;
+  padding: 1.65rem 1.6rem;
 }
 .coupon-row {
   display: flex;
@@ -446,19 +537,22 @@
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
-  margin-top: 0.95rem;
+  margin-top: 1.1rem;
   font-weight: 500;
 }
 .secure-badge svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
   color: var(--accent-teal);
 }
 .cart-guarantees {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-  padding: 1.15rem 1.6rem;
+  gap: 0.85rem;
+  padding: 1.25rem 1.6rem;
   border-top: 1px solid var(--border-medium);
   background: var(--bg-secondary);
   transition: background var(--transition-normal);
@@ -469,16 +563,19 @@
   color: var(--text-secondary);
   line-height: 1.35;
 }
+.cart-guarantee-item svg {
+  width: 22px;
+  height: 22px;
+  margin: 0 auto 0.4rem;
+  display: block;
+  color: var(--accent-teal);
+}
 .cart-guarantee-item strong {
   display: block;
   color: var(--accent-teal);
   font-size: 0.82rem;
   font-weight: 700;
-  margin-top: 0.35rem;
-}
-.cart-guarantee-item svg {
-  margin: 0 auto;
-  color: var(--accent-teal);
+  margin-bottom: 0.15rem;
 }
 
 /* --- Recommended Section --- */
@@ -578,128 +675,310 @@ html[data-theme="light"] #checkout-order-summary {
   background: #f7f3ed !important;
   border: 1px solid #ddd5c8;
 }
+
+/* Sticky summary panel positioning without navbar */
+.cart-summary-panel {
+  position: sticky;
+  top: 5rem !important;
+}
+
+/* Clean bottom padding */
+main {
+  padding-bottom: 4rem;
+}
+
+/* Bottom Action Links */
+.cart-bottom-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0.25rem;
+}
+.cart-action-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+.cart-action-link:hover {
+  text-decoration: underline;
+  color: var(--accent-teal-light);
+}
+.cart-clear-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #ef4444;
+  opacity: 0.85;
+  transition: all var(--transition-fast);
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+}
+.cart-clear-link:hover {
+  opacity: 1;
+  background: rgba(239, 68, 68, 0.08);
+}
+
+/* ==============================================================
+   RESPONSIVE MOBILE VIEW (320px - 768px)
+   ============================================================== */
+@media (max-width: 768px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem 0 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Header adjustments for mobile */
+  .cart-clean-header {
+    padding: 0.65rem 0;
+  }
+  .cart-clean-header-inner {
+    gap: 0.75rem;
+  }
+  .cart-clean-left {
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+    min-width: 0;
+    align-items: center;
+  }
+  .cart-back-btn {
+    padding: 0.38rem 0.65rem;
+    font-size: 0.82rem;
+    gap: 0.3rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .cart-back-label-desk {
+    display: none;
+  }
+  .cart-back-label-mob {
+    display: inline;
+  }
+  .cart-clean-divider {
+    display: none;
+  }
+  .cart-clean-title {
+    font-size: 1.12rem;
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: visible;
+    line-height: 1.2;
+    flex-shrink: 0;
+  }
+  .cart-badge-pill {
+    display: none; /* Hide on mobile to give full clean space to title and icons */
+  }
+  .cart-clean-actions {
+    padding: 0.2rem 0.35rem;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    margin-inline-start: auto;
+  }
+  .cart-clean-actions .btn-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .cart-clean-actions .btn-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Cart Layout & Panels */
+  .cart-layout {
+    padding: 0.85rem 0 2.5rem;
+    gap: 1.25rem;
+  }
+  .cart-panel-header,
+  .cart-summary-header {
+    padding: 0.85rem 1rem;
+  }
+  .cart-panel-header h2,
+  .cart-summary-header h2 {
+    font-size: 1rem;
+  }
+
+  /* Cart Items mobile layout — 2-tier card grid */
+  .cart-item {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.75rem 0.9rem;
+    align-items: start;
+    padding: 1rem 0.95rem;
+  }
+  .cart-item-img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 72px;
+    height: 72px;
+  }
+  .cart-item-info {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .cart-item-brand {
+    font-size: 0.72rem;
+    margin-bottom: 0.15rem;
+  }
+  .cart-item-name {
+    font-size: 0.9rem;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+  }
+  .cart-item-price-single {
+    font-size: 0.82rem;
+  }
+  .cart-item-warranty {
+    font-size: 0.72rem;
+  }
+
+  /* Controls row spans full width */
+  .cart-item-controls {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-subtle);
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .cart-qty-row {
+    order: 1;
+  }
+  .cart-item-total {
+    order: 2;
+    font-size: 1.1rem;
+  }
+  .cart-item-actions {
+    order: 3;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 0.15rem;
+  }
+  .cart-remove-btn,
+  .cart-like-btn {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.78rem;
+    gap: 0.3rem;
+  }
+
+  /* Order Summary Body */
+  .cart-summary-body {
+    padding: 1.15rem 1rem;
+  }
+  .coupon-row {
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+  }
+  .coupon-input {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.84rem;
+  }
+  .coupon-apply-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.82rem;
+  }
+  .summary-line {
+    padding: 0.65rem 0;
+    font-size: 0.88rem;
+  }
+  .summary-line.total-line {
+    font-size: 1.08rem;
+    padding-top: 0.95rem;
+  }
+  .summary-line .total-price {
+    font-size: 1.25rem;
+  }
+  .checkout-btn {
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+    margin-top: 1.15rem;
+  }
+  .secure-badge {
+    font-size: 0.75rem;
+    margin-top: 0.85rem;
+  }
+  .cart-guarantees {
+    padding: 1rem 0.75rem;
+    gap: 0.4rem;
+  }
+  .cart-guarantee-item {
+    font-size: 0.7rem;
+  }
+  .cart-guarantee-item svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0.25rem;
+  }
+  .cart-guarantee-item strong {
+    font-size: 0.75rem;
+  }
+
+  /* Recommended products: single column on mobile */
+  #cart-recommended-grid,
+  #cart-wishlist-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .cart-recommended h2,
+  .cart-wishlist-header h2 {
+    font-size: 1.15rem;
+  }
+}
 </style>
 </head>
 <body>
 
-<!-- Announcement Top Bar -->
-<div class="top-bar">
-  <div class="container top-bar-content">
-    <div class="top-bar-left">
-      <div class="top-bar-item">
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="color:var(--accent-teal);flex-shrink:0;">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+<!-- Clean, Compact Cart Header with Integrated Theme & RTL Controls -->
+<header class="cart-clean-header">
+  <div class="container cart-clean-header-inner">
+    <div class="cart-clean-left">
+      <a href="products.html" class="cart-back-btn" title="Back to Products Showroom">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
         </svg>
-        <span>Authorized Appliance Store &amp; Service Partner: LG, Samsung, Bosch &amp; Miele</span>
-      </div>
-    </div>
-    <div class="top-bar-right">
-      <div class="top-bar-item">
-        <span style="font-weight:700;color:var(--accent-teal);">Free Professional Installation on Major Appliance Purchases</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Main Header -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand-logo">
-      <div class="logo-icon">V</div>
-      <div class="logo-text">
-        VORTEX<span>.</span>
-        <span class="logo-tagline">Appliance Store &amp; Service Center</span>
-      </div>
-    </a>
-    <nav class="nav-menu">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="home2.html" class="nav-link">Home 2</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="products.html" class="nav-link">Products</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="blog.html" class="nav-link">Blog</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-    <div class="header-actions">
-      <div class="header-theme-controls" style="display:flex;align-items:center;gap:.4rem;">
-        <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </button>
-        <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 11 3 7 7 3"/><line x1="21" y1="7" x2="3" y2="7"/><line x1="21" y1="17" x2="9" y2="17"/><polyline points="13 21 9 17 13 13"/></svg>
-        </button>
-      </div>
-      <a href="cart.html" class="header-cart-btn active" id="header-cart-btn" title="View Shopping Cart">
-        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-        </svg>
-        <span class="cart-badge" id="header-cart-count">0</span>
+        <span class="cart-back-label-desk">Continue Shopping</span>
+        <span class="cart-back-label-mob">Back</span>
       </a>
-      <a href="services.html#booking" class="btn btn-sm btn-primary header-cta">Book a Service</a>
-      <button class="btn-icon mobile-toggle" id="mobile-toggle-btn" title="Toggle Navigation">&#9776;</button>
+      <div class="cart-clean-divider"></div>
+      <h1 class="cart-clean-title">Shopping Cart</h1>
+      <span class="cart-badge-pill" id="cart-header-count">0 items</span>
+    </div>
+
+    <!-- Theme & RTL Controls (properly positioned in top header) -->
+    <div class="cart-clean-actions" aria-label="Theme and RTL controls">
+      <button class="btn-icon theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="btn-icon dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 11 3 7 7 3"/><line x1="21" y1="7" x2="3" y2="7"/><line x1="21" y1="17" x2="9" y2="17"/><polyline points="13 21 9 17 13 13"/></svg>
+      </button>
     </div>
   </div>
 </header>
-
-<!-- Mobile Drawer -->
-<div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
-<aside class="mobile-nav-drawer" id="mobile-drawer">
-  <div class="mobile-nav-header">
-    <a href="index.html" class="brand-logo">
-      <div class="logo-icon">V</div>
-      <div class="logo-text">VORTEX<span class="logo-tagline">Appliance Store &amp; Service Center</span></div>
-    </a>
-    <button class="btn-icon" id="mobile-close-btn">&#x2715;</button>
-  </div>
-  <div class="mobile-nav-links">
-    <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="home2.html" class="mobile-nav-link">Home 2</a>
-    <a href="about.html" class="mobile-nav-link">About</a>
-    <a href="products.html" class="mobile-nav-link">Products</a>
-    <a href="services.html" class="mobile-nav-link">Services</a>
-    <a href="blog.html" class="mobile-nav-link">Blog</a>
-    <a href="contact.html" class="mobile-nav-link">Contact</a>
-    <a href="cart.html" class="mobile-nav-link active">My Cart</a>
-  </div>
-  <div class="mobile-drawer-cta-wrap">
-    <a href="services.html#booking" class="mobile-drawer-booking-btn"><span>Book a Repair</span></a>
-  </div>
-  <div class="mobile-drawer-utility">
-    <button class="mobile-util-btn theme-toggle-btn" title="Toggle Theme" aria-label="Toggle Theme">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-      <span>Theme</span>
-    </button>
-    <button class="mobile-util-btn dir-toggle-btn" title="Toggle Direction" aria-label="Toggle Direction">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="7 11 3 7 7 3"/><line x1="21" y1="7" x2="3" y2="7"/><line x1="21" y1="17" x2="9" y2="17"/><polyline points="13 21 9 17 13 13"/></svg>
-      <span>RTL / LTR</span>
-    </button>
-  </div>
-</aside>
-
-<!-- Cart Page Hero -->
-<section class="cart-page-hero">
-  <div class="container">
-    <div class="cart-breadcrumb">
-      <a href="index.html">Home</a>
-      <span class="crumb-sep">&#x203A;</span>
-      <a href="products.html">Products</a>
-      <span class="crumb-sep">&#x203A;</span>
-      <span class="crumb-current">Shopping Cart</span>
-    </div>
-    <h1>Your Shopping Cart</h1>
-    <p>Review your selected appliances, adjust quantities, and proceed to checkout with certified delivery and installation.</p>
-    <div class="cart-progress">
-      <div class="cart-progress-step active"><span class="step-num">1</span><span>Cart Review</span></div>
-      <div class="cart-progress-line"></div>
-      <div class="cart-progress-step"><span class="step-num">2</span><span>Delivery Details</span></div>
-      <div class="cart-progress-line"></div>
-      <div class="cart-progress-step"><span class="step-num">3</span><span>Confirm Order</span></div>
-    </div>
-  </div>
-</section>
 
 <!-- Cart Main Content -->
 <main>
@@ -715,15 +994,27 @@ html[data-theme="light"] #checkout-order-summary {
           <div id="cart-items-list"></div>
         </div>
 
-        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-          <a href="products.html" class="btn btn-secondary" style="font-size:.88rem;font-weight:600;">&#8592; Continue Shopping</a>
-          <button id="clear-cart-btn" class="btn btn-secondary" style="font-size:.88rem;font-weight:600;color:#ef4444;border-color:rgba(239,68,68,.35);" onclick="clearEntireCart()">Remove All Items</button>
+        <div class="cart-bottom-actions">
+          <a href="products.html" class="cart-action-link">&#8592; Continue Shopping</a>
+          <button id="clear-cart-btn" class="cart-clear-link" onclick="clearEntireCart()">Clear Cart</button>
         </div>
 
         <!-- Recommended Products Section -->
         <div class="cart-recommended" id="cart-recommended-section">
           <h2>You Might Also Like</h2>
           <div class="product-grid" id="cart-recommended-grid" style="grid-template-columns:repeat(2,1fr);"></div>
+        </div>
+
+        <!-- Saved / Liked Appliances (Wishlist) Section -->
+        <div class="cart-wishlist-section" id="cart-wishlist-section" style="display:none;">
+          <div class="cart-wishlist-header">
+            <h2>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              <span>Saved / Liked Appliances</span>
+            </h2>
+            <a href="products.html" class="link-btn" style="font-size:0.85rem;font-weight:700;color:var(--accent-teal);">Explore All Showroom Models &#8594;</a>
+          </div>
+          <div class="product-grid" id="cart-wishlist-grid" style="grid-template-columns:repeat(2,1fr);"></div>
         </div>
       </div>
 
@@ -862,69 +1153,7 @@ html[data-theme="light"] #checkout-order-summary {
   </div>
 </div>
 
-<!-- Site Footer -->
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="footer-brand-col">
-      <a href="index.html" class="brand-logo footer-logo">
-        <div class="logo-icon">V</div>
-        <div class="logo-text">VORTEX<span class="logo-tagline">Appliance Store &amp; Service Center</span></div>
-      </a>
-      <p class="footer-brand-desc">Your trusted destination for premium home appliances and professional repair services.</p>
-    </div>
-    <div class="footer-links-col">
-      <h4 class="footer-col-title">Quick Links</h4>
-      <ul class="footer-link-list">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="cart.html">My Cart</a></li>
-      </ul>
-    </div>
-    <div class="footer-links-col">
-      <h4 class="footer-col-title">Shop Categories</h4>
-      <ul class="footer-link-list">
-        <li><a href="products.html?cat=refrigerators">Refrigerators</a></li>
-        <li><a href="products.html?cat=washing-machines">Washing Machines</a></li>
-        <li><a href="products.html?cat=air-conditioners">Air Conditioners</a></li>
-        <li><a href="products.html?cat=ovens">Built-In Ovens</a></li>
-        <li><a href="products.html?cat=microwaves">Microwaves</a></li>
-        <li><a href="products.html?cat=dishwashers">Dishwashers</a></li>
-      </ul>
-    </div>
-    <div class="footer-contact-col">
-      <h4 class="footer-col-title">Contact &amp; Hours</h4>
-      <ul class="footer-contact-list">
-        <li>
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <span>123 Appliance Boulevard, Tech District</span>
-        </li>
-        <li>
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 19.95 19.95 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span>+1 (555) 019-VRTX</span>
-        </li>
-        <li>
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Mon-Sat: 9am-7pm | Sun: 10am-5pm</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <span>&copy; 2025 VORTEX Home Appliance Store &amp; Service Center. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="warranty.html">Warranty</a>
-        <a href="sitemap.html">Sitemap</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<!-- Footer removed per cart page requirements -->
 
 <script src="js/app.js"></script>
 <script>
@@ -937,6 +1166,9 @@ function getCart() {
 
 function saveCart(c) {
   localStorage.setItem('vortex_cart', JSON.stringify(c));
+  if (window.AppState) {
+    window.AppState.cart = c;
+  }
   var t = c.reduce(function(s, i) { return s + (i.quantity || 1); }, 0);
   document.querySelectorAll('#header-cart-count, .cart-badge').forEach(function(el) {
     el.textContent = t;
@@ -951,14 +1183,17 @@ function renderCartPage() {
   var cart = getCart();
   var listEl = document.getElementById('cart-items-list');
   var cntEl = document.getElementById('cart-item-count-label');
+  var headerCnt = document.getElementById('cart-header-count');
   var qty = cart.reduce(function(s, i) { return s + (i.quantity || 1); }, 0);
-  cntEl.textContent = qty + ' item' + (qty !== 1 ? 's' : '');
+  var labelText = qty + ' item' + (qty !== 1 ? 's' : '');
+  if (cntEl) cntEl.textContent = labelText;
+  if (headerCnt) headerCnt.textContent = labelText;
 
   if (cart.length === 0) {
     listEl.innerHTML = '<div class="cart-empty">' +
-      '<svg class="cart-empty-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' +
+      '<svg class="cart-empty-icon" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>' +
       '<h3>Your cart is empty</h3><p>Explore our premium showroom appliances and add products to your cart.</p>' +
-      '<a href="products.html" class="btn btn-primary">Browse Showroom &#x2192;</a></div>';
+      '<a href="products.html" class="btn btn-primary" style="display:inline-flex;padding:0.75rem 1.65rem;font-weight:700;">Browse Showroom &#x2192;</a></div>';
     document.getElementById('clear-cart-btn').style.display = 'none';
     updateSummary(cart);
     renderRecommended(cart);
@@ -968,6 +1203,7 @@ function renderCartPage() {
   document.getElementById('clear-cart-btn').style.display = '';
   listEl.innerHTML = cart.map(function(item) {
     var lt = (item.price || 0) * (item.quantity || 1);
+    var isLiked = (window.AppState && window.AppState.wishlist) ? window.AppState.wishlist.indexOf(item.id) !== -1 : (JSON.parse(localStorage.getItem('vortex_wishlist') || '[]').indexOf(item.id) !== -1);
     return '<div class="cart-item">' +
       '<div class="cart-item-img"><img src="' + item.image + '" alt="' + item.name + '" loading="lazy"/></div>' +
       '<div class="cart-item-info">' +
@@ -979,18 +1215,26 @@ function renderCartPage() {
       '<div class="cart-item-controls">' +
         '<div class="cart-item-total">' + fmt(lt) + '</div>' +
         '<div class="cart-qty-row">' +
-          '<button class="cart-qty-btn" onclick="changeQty('' + item.id + '', -1)" title="Decrease quantity">&#x2212;</button>' +
+          '<button class="cart-qty-btn" onclick="changeQty(\'' + item.id + '\', -1)" title="Decrease quantity">&#x2212;</button>' +
           '<div class="cart-qty-val">' + (item.quantity || 1) + '</div>' +
-          '<button class="cart-qty-btn" onclick="changeQty('' + item.id + '', 1)" title="Increase quantity">+</button>' +
+          '<button class="cart-qty-btn" onclick="changeQty(\'' + item.id + '\', 1)" title="Increase quantity">+</button>' +
         '</div>' +
-        '<button class="cart-remove-btn" onclick="removeFromCart('' + item.id + '')">' +
-          '<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m5 0V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/></svg>Remove' +
-        '</button>' +
+        '<div class="cart-item-actions">' +
+          '<button class="cart-like-btn ' + (isLiked ? 'active' : '') + '" onclick="toggleCartItemWishlist(\'' + item.id + '\', this)" title="' + (isLiked ? 'Saved to Liked' : 'Save to Liked') + '">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="' + (isLiked ? 'currentColor' : 'none') + '" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>' +
+            '<span>' + (isLiked ? 'Saved' : 'Save') + '</span>' +
+          '</button>' +
+          '<button class="cart-remove-btn" onclick="removeFromCart(\'' + item.id + '\')" title="Remove item">' +
+            '<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m5 0V4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/></svg>' +
+            '<span>Remove</span>' +
+          '</button>' +
+        '</div>' +
       '</div></div>';
   }).join('');
 
   updateSummary(cart);
   renderRecommended(cart);
+  renderSavedWishlist();
 }
 
 function changeQty(id, d) {
@@ -1006,6 +1250,41 @@ function removeFromCart(id) {
   saveCart(getCart().filter(function(i) { return i.id !== id; }));
   renderCartPage();
 }
+
+window.toggleCartItemWishlist = function(id, btn) {
+  if (window.toggleWishlist) {
+    window.toggleWishlist(id, btn);
+  } else {
+    var saved = JSON.parse(localStorage.getItem('vortex_wishlist') || '[]');
+    var idx = saved.indexOf(id);
+    if (idx !== -1) {
+      saved.splice(idx, 1);
+      if (btn) btn.classList.remove('active');
+    } else {
+      saved.push(id);
+      if (btn) btn.classList.add('active');
+    }
+    localStorage.setItem('vortex_wishlist', JSON.stringify(saved));
+  }
+  renderCartPage();
+};
+
+window.renderSavedWishlist = function() {
+  var wishlistSec = document.getElementById('cart-wishlist-section');
+  var wishlistGrid = document.getElementById('cart-wishlist-grid');
+  if (!wishlistSec || !wishlistGrid) return;
+  var wishlistIds = JSON.parse(localStorage.getItem('vortex_wishlist') || '[]');
+  var all = window._vortexProducts || [];
+  var savedProducts = all.filter(function(p) { return wishlistIds.indexOf(p.id) !== -1; });
+  if (savedProducts.length === 0) {
+    wishlistSec.style.display = 'none';
+    return;
+  }
+  wishlistSec.style.display = '';
+  wishlistGrid.innerHTML = savedProducts.map(function(p) {
+    return window.renderProductCard ? window.renderProductCard(p) : '';
+  }).join('');
+};
 
 window.clearEntireCart = function() {
   if (confirm('Are you sure you want to remove all items from your cart?')) {
