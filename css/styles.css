@@ -6818,6 +6818,99 @@ html[data-theme="light"] .wg-img {
   width: 100%;
 }
 
+/* --- Eco Sustainability Circular Gauge --- */
+.eco-gauge-wrapper {
+  position: relative;
+  width: 124px;
+  height: 124px;
+  margin: 0 auto 1.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.12) 0%, rgba(16, 185, 129, 0.02) 65%, transparent 100%);
+  border-radius: 50%;
+}
+
+.eco-gauge-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.35));
+}
+
+.eco-gauge-track {
+  fill: none;
+  stroke: rgba(16, 185, 129, 0.16);
+  stroke-width: 8;
+}
+
+.eco-gauge-progress {
+  fill: none;
+  stroke: #10b981;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 301.6;
+  stroke-dashoffset: 0;
+  animation: ecoGaugeAnimate 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes ecoGaugeAnimate {
+  from {
+    stroke-dashoffset: 301.6;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.eco-gauge-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.eco-gauge-val {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #10b981;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.eco-gauge-lbl {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+html[data-theme="light"] .eco-gauge-track {
+  stroke: rgba(16, 185, 129, 0.2);
+}
+
+html[data-theme="light"] .eco-gauge-progress {
+  stroke: #059669;
+}
+
+html[data-theme="light"] .eco-gauge-val {
+  color: #059669;
+}
+
+html[data-theme="light"] .eco-gauge-lbl {
+  color: #4b5563;
+}
+
 /* Responsive query for About Page sections */
 @media (max-width: 1024px) {
   .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
@@ -7462,6 +7555,16 @@ html[data-theme="light"] .guarantee-icon-box {
   border-color: var(--accent-teal);
   color: #121619;
   transform: translateY(-3px);
+}
+
+.social-icon-btn svg {
+  display: block;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+}
+
+.social-icon-btn:hover svg {
+  transform: scale(1.12);
 }
 
 .footer-nav-list {
